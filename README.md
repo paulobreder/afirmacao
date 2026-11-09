@@ -33,14 +33,9 @@ Outros comandos: `npm run build` (gera `dist/`), `npm run preview` (serve o buil
 
 ## Publicação
 
-Para publicar ou atualizar o site no GitHub Pages, rode no seu computador:
-
-```bash
-npm run deploy
-```
-
-O comando gera o build com `BASE_PATH=/afirmacao/` (o site fica nesse subendereço) e envia a pasta `dist/` para a branch `gh-pages`.
-O site atualiza em cerca de 1 a 2 minutos. Alterações feitas só no GitHub (por exemplo, pelo github.dev) precisam de `git pull` seguido de `npm run deploy`.
+O site é publicado no GitHub Pages automaticamente a cada envio para a branch `main` (`.github/workflows/deploy.yml`),
+inclusive alterações feitas direto no GitHub ou pelo github.dev. Leva cerca de 1 a 2 minutos; o andamento aparece na aba **Actions** do repositório.
+O build usa `BASE_PATH=/afirmacao/` porque o site fica nesse subendereço.
 
 Também funciona em outras hospedagens estáticas (pasta `dist/`; inclui `_redirects` para Netlify e `vercel.json`).
 O servidor precisa aceitar pedidos parciais (`Accept-Ranges: bytes`) para os PDFs grandes abrirem por partes — Netlify, Vercel e nginx fazem isso por padrão.

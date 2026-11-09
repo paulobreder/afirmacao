@@ -3,8 +3,7 @@
 _Última atualização: 9 de novembro de 2026 — primeira versão completa._
 
 ## Publicação
-- No ar em https://paulobreder.github.io/afirmacao/ (GitHub Pages, branch `gh-pages`, publicado com `npm run deploy`).
-- Publicação automática a cada envio: o workflow está pronto em `.github/workflows/deploy.yml` (fora do git), mas enviá-lo exige autorizar o escopo `workflow` no `gh` (`gh auth refresh -h github.com -s workflow`).
+- No ar em https://paulobreder.github.io/afirmacao/ (GitHub Pages), publicado automaticamente a cada envio para `main` (`.github/workflows/deploy.yml`).
 - A ficha de resumo não está na versão publicada (arquivo fora do repositório) e aparece como indisponível.
 
 ## Entregue

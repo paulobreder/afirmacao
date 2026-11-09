@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview",
-    "deploy": "BASE_PATH=/afirmacao/ PUBLICAR_GITHUB=1 npm run build && gh-pages -d dist --nojekyll -m \"Publicar site\""
+    "preview": "vite preview"
   },
   "dependencies": {
     "lucide-react": "^1.70.0",
@@ -23,7 +22,6 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
-    "gh-pages": "^6.3.0",
     "oxlint": "^1.90.0",
     "tailwindcss": "^4.3.5",
     "typescript": "~7.0.2",
