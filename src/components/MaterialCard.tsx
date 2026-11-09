@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
-import { Download, Eye, FileText, Wifi } from 'lucide-react'
+import { CircleAlert, Download, Eye, FileText, Wifi } from 'lucide-react'
 import {
   capaUrl,
+  disponivel,
   getCategoria,
   LIMITE_ARQUIVO_GRANDE,
   nomeDownload,
@@ -15,7 +16,8 @@ export function MaterialCard({ material, headingLevel = 'h3' }: { material: Mate
   const categoria = getCategoria(material.categoria)
   const { shelf } = categoriaVisual[material.categoria]
   const Heading = headingLevel
-  const grande = material.bytes > LIMITE_ARQUIVO_GRANDE
+  const online = disponivel(material)
+  const grande = online && material.bytes > LIMITE_ARQUIVO_GRANDE
 
   return (
     <article className="card group relative grid h-full grid-cols-[96px_1fr] overflow-hidden sm:flex sm:flex-col transition-[box-shadow,transform] duration-300 ease-[var(--ease-out)] hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]">
@@ -68,21 +70,28 @@ export function MaterialCard({ material, headingLevel = 'h3' }: { material: Mate
           </p>
         )}
       </div>
-      <div className="relative z-10 col-span-2 flex gap-2 px-4 pb-4 sm:px-5 sm:pb-5">
-        <Link to={`/materiais/${material.slug}`} className="btn btn-primary btn-sm flex-1">
-          <Eye className="size-4" aria-hidden />
-          Visualizar
-        </Link>
-        <a
-          href={pdfUrl(material)}
-          download={nomeDownload(material)}
-          className="btn btn-secondary btn-sm flex-1"
-          aria-label={`Baixar ${material.titulo} (PDF, ${formatarTamanho(material.bytes)})`}
-        >
-          <Download className="size-4" aria-hidden />
-          Baixar
-        </a>
-      </div>
+      {online ? (
+        <div className="relative z-10 col-span-2 flex gap-2 px-4 pb-4 sm:px-5 sm:pb-5">
+          <Link to={`/materiais/${material.slug}`} className="btn btn-primary btn-sm flex-1">
+            <Eye className="size-4" aria-hidden />
+            Visualizar
+          </Link>
+          <a
+            href={pdfUrl(material)}
+            download={nomeDownload(material)}
+            className="btn btn-secondary btn-sm flex-1"
+            aria-label={`Baixar ${material.titulo} (PDF, ${formatarTamanho(material.bytes)})`}
+          >
+            <Download className="size-4" aria-hidden />
+            Baixar
+          </a>
+        </div>
+      ) : (
+        <p className="relative z-10 col-span-2 mx-4 mb-4 flex items-start gap-2 rounded-xl bg-ice px-3 py-2.5 text-[0.85rem] font-medium text-ink-muted sm:mx-5 sm:mb-5">
+          <CircleAlert className="mt-0.5 size-4 shrink-0 text-action-strong" aria-hidden />
+          Arquivo temporariamente indisponível nesta versão do site.
+        </p>
+      )}
     </article>
   )
 }

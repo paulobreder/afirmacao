@@ -1,10 +1,10 @@
 import { Link, useParams, useSearchParams } from 'react-router-dom'
-import { ArrowLeft, ChevronRight, Download, ExternalLink, FileText, ListChecks, Wifi } from 'lucide-react'
+import { ArrowLeft, ChevronRight, CircleAlert, Download, ExternalLink, FileText, ListChecks, Wifi } from 'lucide-react'
 import { Seo } from '../components/Seo'
 import { PdfViewer } from '../components/PdfViewer'
 import { MaterialCard } from '../components/MaterialCard'
 import { categoriaVisual } from '../components/categoria-visual'
-import { getCategoria, getMaterial, LIMITE_ARQUIVO_GRANDE, materiais, nomeDownload, pdfUrl } from '../data/materiais'
+import { disponivel, getCategoria, getMaterial, LIMITE_ARQUIVO_GRANDE, materiais, nomeDownload, pdfUrl } from '../data/materiais'
 import { formatarTamanho } from '../lib/format'
 import NotFound from './NotFound'
 
@@ -32,6 +32,7 @@ export default function MaterialPage() {
     .filter((m) => m.categoria === material.categoria && m.slug !== material.slug)
     .slice(0, 4)
   const url = pdfUrl(material)
+  const online = disponivel(material)
 
   return (
     <>
@@ -78,24 +79,26 @@ export default function MaterialPage() {
                   </div>
                 )}
               </dl>
-              {material.bytes > LIMITE_ARQUIVO_GRANDE && (
+              {online && material.bytes > LIMITE_ARQUIVO_GRANDE && (
                 <p className="mt-4 inline-flex items-start gap-2 rounded-xl bg-energy-soft px-4 py-2.5 text-[0.925rem] font-medium text-[#6b4800]">
                   <Wifi className="mt-0.5 size-4 shrink-0" aria-hidden />
                   Arquivo grande. O visualizador carrega uma página por vez; para baixar o arquivo inteiro, prefira uma rede Wi-Fi.
                 </p>
               )}
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-              <a href={url} download={nomeDownload(material)} className="btn btn-primary">
-                <Download className="size-5" aria-hidden /> Baixar PDF
-              </a>
-              <a href={url} target="_blank" rel="noopener" className="btn btn-secondary">
-                <ExternalLink className="size-5" aria-hidden /> Abrir em nova aba
-              </a>
-            </div>
+            {online && (
+              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+                <a href={url} download={nomeDownload(material)} className="btn btn-primary">
+                  <Download className="size-5" aria-hidden /> Baixar PDF
+                </a>
+                <a href={url} target="_blank" rel="noopener" className="btn btn-secondary">
+                  <ExternalLink className="size-5" aria-hidden /> Abrir em nova aba
+                </a>
+              </div>
+            )}
           </div>
 
-          {material.paginaResolucoes && (
+          {online && material.paginaResolucoes && (
             <div className="mt-6 flex flex-wrap items-center gap-3 rounded-2xl bg-white p-3 pl-4 ring-1 ring-line">
               <ListChecks className="size-5 text-brand" aria-hidden />
               <p className="text-[0.95rem] text-ink-muted">
@@ -116,15 +119,27 @@ export default function MaterialPage() {
 
       <section id="visualizador" aria-label="Visualização do PDF" className="scroll-mt-[72px] bg-ice py-6 md:py-10">
         <div className="container-site">
-          <PdfViewer
-            key={material.slug}
-            url={url}
-            titulo={material.titulo}
-            totalPaginas={material.paginas}
-            pagina={pagina}
-            onPaginaChange={setPagina}
-            downloadName={nomeDownload(material)}
-          />
+          {online ? (
+            <PdfViewer
+              key={material.slug}
+              url={url}
+              titulo={material.titulo}
+              totalPaginas={material.paginas}
+              pagina={pagina}
+              onPaginaChange={setPagina}
+              downloadName={nomeDownload(material)}
+            />
+          ) : (
+            <div role="status" className="card px-6 py-12 text-center">
+              <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-action-soft text-action-strong">
+                <CircleAlert className="size-7" aria-hidden />
+              </span>
+              <p className="mt-5 font-display text-xl font-bold text-navy">Este arquivo está indisponível no momento</p>
+              <p className="mx-auto mt-2 max-w-md text-ink-muted">
+                O PDF ainda não foi disponibilizado nesta versão do site. Enquanto isso, confira os outros materiais desta categoria.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 

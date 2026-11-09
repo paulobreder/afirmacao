@@ -4,7 +4,7 @@ import { Seo } from '../components/Seo'
 import { LogoSymbol } from '../components/Logo'
 import { MaterialCard } from '../components/MaterialCard'
 import { categoriaVisual } from '../components/categoria-visual'
-import { categorias, contarPorCategoria, getMaterial, materiais, type CategoriaId } from '../data/materiais'
+import { arquivoPublico, categorias, contarPorCategoria, getMaterial, materiais, type CategoriaId } from '../data/materiais'
 import { documentosMatricula } from '../data/guia'
 
 const RaioXIcon = categoriaVisual['raio-x'].Icon
@@ -120,9 +120,9 @@ function Hero() {
 
         <div className="relative mx-auto w-full max-w-[400px] sm:max-w-[440px] lg:mr-0 lg:max-w-[490px]">
           <picture>
-            <source media="(max-width: 767px)" srcSet="/img/estudante-afirmacao-640.webp" type="image/webp" />
+            <source media="(max-width: 767px)" srcSet={arquivoPublico('img/estudante-afirmacao-640.webp')} type="image/webp" />
             <img
-              src="/img/estudante-afirmacao.webp"
+              src={arquivoPublico('img/estudante-afirmacao.webp')}
               alt="Estudante sorridente de óculos e cabelo cacheado, com mochila azul e cadernos, segurando um caderno amarelo com o logotipo da AfirmAção."
               width={1122}
               height={1402}

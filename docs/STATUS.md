@@ -2,6 +2,11 @@
 
 _Última atualização: 9 de novembro de 2026 — primeira versão completa._
 
+## Publicação
+- No ar em https://paulobreder.github.io/afirmacao/ (GitHub Pages, branch `gh-pages`, publicado com `npm run deploy`).
+- Publicação automática a cada envio: o workflow está pronto em `.github/workflows/deploy.yml` (fora do git), mas enviá-lo exige autorizar o escopo `workflow` no `gh` (`gh auth refresh -h github.com -s workflow`).
+- A ficha de resumo não está na versão publicada (arquivo fora do repositório) e aparece como indisponível.
+
 ## Entregue
 - **Início** (`/`): hero em duas colunas com a imagem aprovada da estudante, acesso às 3 categorias, destaque do Guia, sugestões de materiais e bloco institucional.
 - **Materiais** (`/materiais`): busca (sem acentos/maiúsculas), filtros por categoria e disciplina sincronizados com a URL (`?categoria=&disciplina=&q=`), estado vazio, contagem anunciada para leitores de tela.

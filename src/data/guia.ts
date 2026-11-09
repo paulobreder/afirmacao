@@ -8,7 +8,7 @@
  */
 
 export const GUIA_REVISADO_EM = 'novembro de 2026'
-export const GUIA_PDF = '/materiais/guia-do-estudante.pdf'
+export const GUIA_PDF = `${import.meta.env.BASE_URL}materiais/guia-do-estudante.pdf`
 
 export interface LinkOficial {
   rotulo: string

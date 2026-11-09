@@ -142,9 +142,15 @@ export const materiais: Material[] = [
 /** Arquivos acima deste tamanho recebem um aviso para usar Wi-Fi. */
 export const LIMITE_ARQUIVO_GRANDE = 25_000_000
 
-export const pdfUrl = (m: Material) => `/materiais/${m.slug}.pdf`
-export const capaUrl = (m: Material) => `/capas/${m.slug}.webp`
+/** Endereço público de um arquivo de `public/`, respeitando o subcaminho de publicação (ex.: GitHub Pages). */
+export const arquivoPublico = (caminho: string) => `${import.meta.env.BASE_URL}${caminho}`
+
+export const pdfUrl = (m: Material) => arquivoPublico(`materiais/${m.slug}.pdf`)
+export const capaUrl = (m: Material) => arquivoPublico(`capas/${m.slug}.webp`)
 export const nomeDownload = (m: Material) => `AfirmAcao - ${m.titulo.replace(/[:/]/g, ' -')}.pdf`
+
+/** O PDF existe nesta publicação? (alguns arquivos grandes podem ficar fora dela) */
+export const disponivel = (m: Material) => __PDFS_DISPONIVEIS__.includes(`${m.slug}.pdf`)
 
 export const getMaterial = (slug: string) => materiais.find((m) => m.slug === slug)
 export const getCategoria = (id: CategoriaId) => categorias.find((c) => c.id === id)!
