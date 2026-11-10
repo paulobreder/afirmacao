@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, BookOpenCheck, Compass, HeartHandshake, LibraryBig, Smartphone, UserRoundX } from 'lucide-react'
 import { Seo } from '../components/Seo'
-import { Logo, LogoSymbol } from '../components/Logo'
+import { Logo } from '../components/Logo'
 import { categorias, contarPorCategoria } from '../data/materiais'
 import { categoriaVisual } from '../components/categoria-visual'
 
@@ -36,7 +36,7 @@ export default function Sobre() {
         description="A AfirmAção é uma iniciativa de educação popular que oferece gratuitamente materiais e orientações para estudantes que se preparam para o ENEM."
       />
 
-      <section className="bg-waves relative overflow-x-clip border-b border-line bg-ice">
+      <section className="bg-waves relative overflow-x-clip border-b border-line bg-paper">
         <div className="container-site grid items-center gap-12 pt-10 pb-14 md:pt-14 md:pb-20 lg:grid-cols-[1.2fr_1fr]">
           <div>
             <p className="eyebrow">Sobre o projeto</p>
@@ -51,8 +51,8 @@ export default function Sobre() {
           </div>
           <div className="relative mx-auto flex w-full max-w-sm items-center justify-center" aria-hidden>
             <div className="aspect-square w-[78%] rounded-full bg-white shadow-[var(--shadow-lift)] ring-1 ring-line" />
-            <LogoSymbol className="absolute h-[46%] w-auto" />
-            <span className="absolute top-[8%] right-[10%] size-10 rounded-full bg-brand" />
+            <Logo className="absolute h-auto w-[56%]" decorativa />
+            <span className="absolute top-[8%] right-[10%] size-10 rounded-full bg-brand-bright" />
             <span className="absolute bottom-[14%] left-[6%] size-5 rounded-full bg-action" />
             <span className="absolute bottom-[4%] right-[22%] size-3 rounded-full bg-energy" />
           </div>
@@ -76,14 +76,14 @@ export default function Sobre() {
               Por isso, a plataforma disponibiliza gratuitamente materiais de revisão, exercícios com resoluções, resumos e
               orientações sobre como ingressar e permanecer no ensino superior.
             </p>
-            <p className="font-display text-xl font-bold text-navy">
+            <p className="font-display text-xl font-bold text-ink">
               Conhecimento que vira <span className="text-action">ação</span>.
             </p>
           </div>
         </div>
       </section>
 
-      <section aria-labelledby="oferece" className="bg-ice py-16 md:py-24">
+      <section aria-labelledby="oferece" className="bg-paper py-16 md:py-24">
         <div className="container-site">
           <div className="max-w-2xl">
             <p className="eyebrow">O que você encontra aqui</p>
@@ -111,7 +111,7 @@ export default function Sobre() {
             })}
             <li>
               <Link to="/guia" className="card group flex h-full flex-col p-6 transition-shadow hover:shadow-[var(--shadow-lift)]">
-                <span className="flex size-12 items-center justify-center rounded-2xl bg-navy text-white">
+                <span className="flex size-12 items-center justify-center rounded-2xl bg-action text-white">
                   <BookOpenCheck className="size-6" aria-hidden />
                 </span>
                 <h3 className="mt-5 text-lg font-extrabold">Guia do Estudante</h3>
@@ -137,7 +137,7 @@ export default function Sobre() {
           </div>
           <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {principios.map(({ Icon, titulo, texto }) => (
-              <li key={titulo} className="rounded-[var(--radius-card)] bg-ice p-6">
+              <li key={titulo} className="rounded-[var(--radius-card)] bg-paper p-6">
                 <span className="flex size-12 items-center justify-center rounded-full bg-white text-brand ring-1 ring-line">
                   <Icon className="size-6" aria-hidden />
                 </span>
@@ -149,20 +149,23 @@ export default function Sobre() {
         </div>
       </section>
 
-      <section className="bg-ice py-16 md:py-24">
+      <section className="bg-paper py-16 md:py-24">
         <div className="container-site">
-          <div className="relative overflow-hidden rounded-[var(--radius-panel)] bg-navy px-6 py-12 sm:px-12 sm:py-16">
-            <span aria-hidden className="absolute -right-20 -bottom-24 size-72 rounded-full border-[32px] border-white/5" />
+          <div className="relative overflow-hidden rounded-[var(--radius-panel)] bg-white px-6 py-12 ring-1 ring-line sm:px-12 sm:py-16">
+            <span aria-hidden className="absolute -right-20 -bottom-24 size-72 rounded-full border-[32px] border-brand-tint" />
             <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
               <div>
-                <Logo tone="dark" size="lg" slogan />
-                <p className="mt-6 max-w-lg text-lg text-white/80">Seu caminho gratuito para o ENEM começa por um material. Escolha o seu.</p>
+                <div className="flex items-center gap-4">
+                  <Logo className="h-16 w-auto" />
+                  <p className="font-display text-[0.95rem] font-semibold text-ink-muted">Conhecimento que vira ação.</p>
+                </div>
+                <p className="mt-6 max-w-lg text-lg text-ink-muted">Seu caminho gratuito para o ENEM começa por um material. Escolha o seu.</p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link to="/materiais" className="btn btn-primary">
                   <LibraryBig className="size-5" aria-hidden /> Explorar materiais
                 </Link>
-                <Link to="/guia" className="btn bg-white/10 text-white ring-1 ring-white/25 hover:bg-white/15">
+                <Link to="/guia" className="btn btn-secondary">
                   Guia do Estudante
                 </Link>
               </div>

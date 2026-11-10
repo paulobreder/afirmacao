@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, BadgeCheck, CircleCheck, Compass, FileCheck2, Smartphone, UserRoundX } from 'lucide-react'
 import { Seo } from '../components/Seo'
-import { LogoSymbol } from '../components/Logo'
+import { Logo } from '../components/Logo'
 import { MaterialCard } from '../components/MaterialCard'
 import { categoriaVisual } from '../components/categoria-visual'
 import { arquivoPublico, categorias, contarPorCategoria, getMaterial, materiais, type CategoriaId } from '../data/materiais'
@@ -37,7 +37,7 @@ export default function Home() {
 
 function Hero() {
   return (
-    <section aria-labelledby="hero-titulo" className="bg-waves relative overflow-x-clip bg-ice">
+    <section aria-labelledby="hero-titulo" className="bg-waves relative overflow-x-clip bg-paper">
       {/* formas geométricas discretas */}
       <span aria-hidden className="pointer-events-none absolute -top-24 -left-24 size-64 rounded-full bg-brand-soft/70 blur-0" />
 
@@ -52,7 +52,7 @@ function Hero() {
             className="animate-rise delay-1 mt-6 text-[2.6rem] leading-[1.06] font-extrabold tracking-[-0.035em] sm:text-[3.4rem] lg:text-[4.1rem]"
           >
             Seu caminho gratuito para o{' '}
-            <span className="relative inline-block whitespace-nowrap text-brand">
+            <span className="relative inline-block whitespace-nowrap text-action">
               ENEM
               <svg
                 aria-hidden
@@ -60,7 +60,7 @@ function Hero() {
                 preserveAspectRatio="none"
                 className="absolute -bottom-1.5 left-0 h-[0.22em] w-full sm:-bottom-2"
               >
-                <path d="M3 11c50-7 120-9 194-4" stroke="#F2B544" strokeWidth="7" strokeLinecap="round" fill="none" />
+                <path d="M3 11c50-7 120-9 194-4" stroke="#F1B521" strokeWidth="7" strokeLinecap="round" fill="none" />
               </svg>
             </span>
             .
@@ -76,7 +76,7 @@ function Hero() {
             </Link>
             <Link
               to="/sobre"
-              className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full px-2 font-semibold text-navy hover:text-brand sm:justify-start"
+              className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full px-2 font-semibold text-ink hover:text-brand sm:justify-start"
             >
               <span className="flex size-11 items-center justify-center rounded-full bg-white text-brand shadow-[var(--shadow-soft)] ring-1 ring-line transition-transform duration-300 group-hover:scale-105">
                 <Compass className="size-5" aria-hidden />
@@ -102,7 +102,7 @@ function Hero() {
                 <span className="flex size-9 items-center justify-center rounded-xl bg-action-soft text-action-strong">
                   <RaioXIcon className="size-[18px]" aria-hidden />
                 </span>
-                <span className="font-display text-[0.95rem] leading-tight font-extrabold text-navy">{totalQuestoesRaioX} questões resolvidas</span>
+                <span className="font-display text-[0.95rem] leading-tight font-extrabold text-ink">{totalQuestoesRaioX} questões resolvidas</span>
               </Link>
             </li>
             <li>
@@ -110,7 +110,7 @@ function Hero() {
                 <span className="flex size-9 items-center justify-center rounded-xl bg-brand-soft text-brand">
                   <RevisaoIcon className="size-[18px]" aria-hidden />
                 </span>
-                <span className="font-display text-[0.95rem] leading-tight font-extrabold text-navy">
+                <span className="font-display text-[0.95rem] leading-tight font-extrabold text-ink">
                   {contarPorCategoria('revisao')} apostilas de revisão
                 </span>
               </Link>
@@ -141,7 +141,7 @@ function Hero() {
             </span>
             <span className="leading-tight">
               <span className="block text-xs font-medium text-ink-subtle">Raio-X ENEM</span>
-              <span className="block font-display text-[0.95rem] font-extrabold text-navy sm:text-base">
+              <span className="block font-display text-[0.95rem] font-extrabold text-ink sm:text-base">
                 {totalQuestoesRaioX} questões resolvidas
               </span>
             </span>
@@ -155,13 +155,13 @@ function Hero() {
               <span className="flex size-9 items-center justify-center rounded-xl bg-brand-soft text-brand">
                 <RevisaoIcon className="size-[18px]" aria-hidden />
               </span>
-              <span className="font-display text-[0.95rem] font-extrabold text-navy">
+              <span className="font-display text-[0.95rem] font-extrabold text-ink">
                 {contarPorCategoria('revisao')} apostilas de revisão
               </span>
             </span>
             <span aria-hidden className="mt-3 flex flex-col gap-2">
               {[
-                ['bg-brand', 'w-[78%]'],
+                ['bg-brand-bright', 'w-[78%]'],
                 ['bg-action', 'w-[62%]'],
                 ['bg-energy', 'w-[70%]'],
               ].map(([dot, w]) => (
@@ -203,8 +203,8 @@ function Categorias() {
                   to={`/materiais?categoria=${c.id}`}
                   className={`group flex h-full flex-col items-center rounded-[var(--radius-card)] px-7 py-10 text-center transition-[transform,box-shadow,background-color] duration-300 ease-[var(--ease-out)] md:py-12 ${
                     featured
-                      ? 'bg-brand text-white shadow-[0_24px_48px_-20px_rgb(43_80_204/0.6)] md:py-16'
-                      : 'bg-ice text-navy hover:-translate-y-1 hover:bg-white hover:shadow-[var(--shadow-lift)] md:rounded-none md:first:rounded-l-[var(--radius-card)] md:last:rounded-r-[var(--radius-card)]'
+                      ? 'bg-action text-white shadow-[0_24px_48px_-20px_rgb(219_56_49/0.5)] md:py-16'
+                      : 'bg-paper text-ink hover:-translate-y-1 hover:bg-white hover:shadow-[var(--shadow-lift)] md:rounded-none md:first:rounded-l-[var(--radius-card)] md:last:rounded-r-[var(--radius-card)]'
                   } ${i === 0 ? 'md:rounded-l-[var(--radius-card)]' : ''} ${i === 2 ? 'md:rounded-r-[var(--radius-card)]' : ''}`}
                 >
                   <span
@@ -215,7 +215,7 @@ function Categorias() {
                     <Icon className="size-7" aria-hidden />
                   </span>
                   <h3 className={`mt-6 text-[1.35rem] font-bold ${featured ? 'text-white' : ''}`}>{c.nome}</h3>
-                  <p className={`mt-3 max-w-[18rem] leading-relaxed ${featured ? 'text-white/85' : 'text-ink-muted'}`}>
+                  <p className={`mt-3 max-w-[18rem] leading-relaxed ${featured ? 'text-white' : 'text-ink-muted'}`}>
                     {c.descricao}
                   </p>
                   <p
@@ -246,18 +246,18 @@ function GuiaDestaque() {
     'Programas de permanência estudantil',
   ]
   return (
-    <section aria-labelledby="guia-titulo" className="overflow-x-clip bg-ice py-20 md:py-28">
+    <section aria-labelledby="guia-titulo" className="overflow-x-clip bg-paper py-20 md:py-28">
       <div className="container-site grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
         {/* Composição visual: checklist real do Guia sobre o arco amarelo da marca */}
         <div className="relative mx-auto w-full max-w-[460px] pt-28 pb-2 sm:pt-36" aria-hidden>
           <div className="absolute inset-x-[7%] top-0 bottom-[14%] rounded-t-full bg-energy" />
-          <span className="absolute top-[2%] right-[10%] size-10 rounded-full bg-brand sm:size-12" />
+          <span className="absolute top-[2%] right-[10%] size-10 rounded-full bg-brand-bright sm:size-12" />
           <span className="absolute top-[22%] left-[2%] size-4 rounded-full bg-action" />
-          <svg viewBox="0 0 120 120" className="absolute top-[2%] left-[4%] w-24 text-navy/30" fill="none">
+          <svg viewBox="0 0 120 120" className="absolute top-[2%] left-[4%] w-24 text-ink/30" fill="none">
             <path d="M4 116C10 56 56 8 116 4" stroke="currentColor" strokeWidth="2.5" strokeDasharray="7 8" strokeLinecap="round" />
           </svg>
           <div className="relative mx-auto w-[88%] rounded-[var(--radius-card)] bg-white p-5 shadow-[var(--shadow-lift)] ring-1 ring-line sm:p-6">
-            <p className="flex items-center gap-2 font-display text-[1.05rem] font-extrabold text-navy">
+            <p className="flex items-center gap-2 font-display text-[1.05rem] font-extrabold text-ink">
               <FileCheck2 className="size-5 text-brand" />
               Checklist de matrícula
             </p>
@@ -273,7 +273,7 @@ function GuiaDestaque() {
               + {documentosMatricula.length - 5} documentos no guia completo
             </p>
           </div>
-          <span className="absolute top-[13%] -right-1 rounded-full bg-white px-4 py-2 font-display text-sm font-extrabold text-navy shadow-[var(--shadow-soft)] ring-1 ring-line sm:-right-3">
+          <span className="absolute top-[13%] -right-1 rounded-full bg-white px-4 py-2 font-display text-sm font-extrabold text-ink shadow-[var(--shadow-soft)] ring-1 ring-line sm:-right-3">
             Sisu · ProUni · Fies
           </span>
         </div>
@@ -289,7 +289,7 @@ function GuiaDestaque() {
           </p>
           <ul className="mt-8 space-y-3.5">
             {topicos.map((t) => (
-              <li key={t} className="flex items-start gap-3 text-[1.025rem] font-medium text-navy">
+              <li key={t} className="flex items-start gap-3 text-[1.025rem] font-medium text-ink">
                 <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-md bg-brand text-white">
                   <CircleCheck className="size-4" aria-hidden />
                 </span>
@@ -329,7 +329,7 @@ function Sugestoes() {
           {sugestoes.map((m, i) => (
             <li key={m.slug} className="flex flex-col">
               <p className="mb-3 flex items-center gap-2 font-display text-sm font-extrabold text-ink-subtle">
-                <span className="flex size-7 items-center justify-center rounded-full bg-navy text-[0.8rem] text-white">
+                <span className="flex size-7 items-center justify-center rounded-full bg-action text-[0.8rem] text-white">
                   {i + 1}
                 </span>
                 {['Veja o que mais cai', 'Pratique com questões', 'Revise a teoria'][i]}
@@ -345,7 +345,7 @@ function Sugestoes() {
 
 function Institucional() {
   return (
-    <section aria-labelledby="institucional-titulo" className="bg-ice py-20 md:py-28">
+    <section aria-labelledby="institucional-titulo" className="bg-paper py-20 md:py-28">
       <div className="container-site grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
         <div className="max-w-xl">
           <p className="eyebrow">Sobre a AfirmAção</p>
@@ -363,24 +363,18 @@ function Institucional() {
           </Link>
         </div>
 
-        <div className="relative overflow-hidden rounded-[var(--radius-panel)] bg-navy px-8 py-14 sm:px-12 sm:py-16" aria-hidden>
-          <span className="absolute -top-16 -right-16 size-56 rounded-full border-[28px] border-white/5" />
+        <div className="relative overflow-hidden rounded-[var(--radius-panel)] bg-white px-8 py-14 ring-1 ring-line sm:px-12 sm:py-16" aria-hidden>
+          <span className="absolute -top-16 -right-16 size-56 rounded-full border-[28px] border-brand-tint" />
           <span className="absolute right-10 bottom-10 size-5 rounded-full bg-energy" />
           <span className="absolute top-10 right-24 size-3 rounded-full bg-action" />
           <div className="relative flex flex-col items-start gap-8 sm:flex-row sm:items-center">
-            <LogoSymbol className="h-24 w-auto sm:h-28" />
-            <div>
-              <p className="font-display text-[2.4rem] leading-none font-extrabold tracking-[-0.035em] sm:text-[2.9rem]">
-                <span className="text-white">Afirm</span>
-                <span className="text-action">Ação</span>
-              </p>
-              <p className="mt-3 font-display text-lg font-semibold text-white/85">Conhecimento que vira ação.</p>
-            </div>
+            <Logo className="h-28 w-auto sm:h-32" decorativa />
+            <p className="font-display text-lg font-semibold text-ink-muted">Conhecimento que vira ação.</p>
           </div>
-          <div className="relative mt-10 grid grid-cols-3 gap-3 border-t border-white/10 pt-8 text-white/80">
+          <div className="relative mt-10 grid grid-cols-3 gap-3 border-t border-line pt-8 text-ink-muted">
             {['Revisar', 'Praticar', 'Ingressar'].map((t, i) => (
               <p key={t} className="flex items-center gap-2 font-display text-[0.95rem] font-bold">
-                <span className={`size-2.5 rounded-full ${['bg-brand', 'bg-action', 'bg-energy'][i]}`} />
+                <span className={`size-2.5 rounded-full ${['bg-brand-bright', 'bg-action', 'bg-energy'][i]}`} />
                 {t}
               </p>
             ))}

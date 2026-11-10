@@ -38,7 +38,7 @@ export default function MaterialPage() {
     <>
       <Seo title={material.titulo} description={`${material.descricao} PDF gratuito com ${material.paginas} páginas.`} />
 
-      <section className="border-b border-line bg-ice">
+      <section className="border-b border-line bg-paper">
         <div className="container-site pt-6 pb-8 md:pt-8 md:pb-10">
           <nav aria-label="Você está em" className="text-sm">
             <ol className="flex flex-wrap items-center gap-1 text-ink-muted">
@@ -74,7 +74,7 @@ export default function MaterialPage() {
                 </div>
                 {material.origem && (
                   <div>
-                    <dt className="inline font-medium text-navy">Origem: </dt>
+                    <dt className="inline font-medium text-ink">Origem: </dt>
                     <dd className="inline">{material.origem}</dd>
                   </div>
                 )}
@@ -117,7 +117,7 @@ export default function MaterialPage() {
         </div>
       </section>
 
-      <section id="visualizador" aria-label="Visualização do PDF" className="scroll-mt-[72px] bg-ice py-6 md:py-10">
+      <section id="visualizador" aria-label="Visualização do PDF" className="scroll-mt-[72px] bg-paper py-6 md:py-10">
         <div className="container-site">
           {online ? (
             <PdfViewer
@@ -134,7 +134,7 @@ export default function MaterialPage() {
               <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-action-soft text-action-strong">
                 <CircleAlert className="size-7" aria-hidden />
               </span>
-              <p className="mt-5 font-display text-xl font-bold text-navy">Este arquivo está indisponível no momento</p>
+              <p className="mt-5 font-display text-xl font-bold text-ink">Este arquivo está indisponível no momento</p>
               <p className="mx-auto mt-2 max-w-md text-ink-muted">
                 O PDF ainda não foi disponibilizado nesta versão do site. Enquanto isso, confira os outros materiais desta categoria.
               </p>

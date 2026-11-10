@@ -4,7 +4,7 @@ import { Seo } from '../components/Seo'
 
 export default function NotFound({ mensagem }: { mensagem?: string }) {
   return (
-    <section className="bg-waves bg-ice py-24 md:py-32">
+    <section className="bg-waves bg-paper py-24 md:py-32">
       <Seo title="Página não encontrada" description="A página procurada não existe na AfirmAção." />
       <div className="container-site max-w-xl text-center">
         <span className="mx-auto flex size-16 items-center justify-center rounded-full bg-brand-soft text-brand">

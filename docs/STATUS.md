@@ -12,7 +12,7 @@ _Última atualização: 9 de novembro de 2026 — primeira versão completa._
 - **Material** (`/materiais/:slug`): visualizador pdf.js (uma página por vez, carregamento por partes, zoom, teclado, `?pagina=N`), atalhos para questões/resoluções do Raio-X, download, abrir em nova aba, estado de erro e de arquivo ausente.
 - **Guia do Estudante** (`/guia`): conteúdo integral do documento informativo, com checklist de matrícula em destaque, cotas, ProUni/Fies, permanência (acordeões) e links oficiais.
 - **Sobre o Projeto** (`/sobre`): missão e proposta, sem fatos inventados.
-- Logotipo recriado em SVG (`src/components/Logo.tsx`, `public/favicon.svg`) a partir da prancha aprovada.
+- **Identidade atualizada (10/11/2026):** logo institucional original (punho com lápis) em `public/img/marca/`, extraída da prancha da coordenação com fundo removido; favicon recortado do punho; paleta laranja `#F57C00`, vermelho `#DB3831`, amarelo `#F1B521` e branco (tokens em `src/index.css`). Layout, textos e funcionalidades inalterados.
 
 ## Inventário de PDFs (`CONTEUDOS_SITE/rx-sociologia/`, 19 arquivos)
 | Categoria | Qtde | Arquivos |
@@ -31,6 +31,8 @@ Cópias com nomes sem acento em `public/materiais/`; capas geradas em `public/ca
 - Links oficiais do Guia respondendo (o portal do Planalto não respondeu a partir do ambiente de teste; endereço conferido em busca).
 
 ## Pendências
+- **Arquivo original da logo**: a logo foi recortada da prancha (552 × 318 px). Se a coordenação enviar o arquivo original em alta resolução, substituir `public/img/marca/logo-afirmacao.webp`/`.png` e o favicon.
+- **Foto da estudante**: o caderno ainda mostra a logo anterior (mantido por decisão da coordenação até novo pedido).
 - **Segunda ficha de resumo não encontrada**: a pasta tem apenas `Ficha resumo objetivo -1.pdf` (volume 1). Ao receber a outra, copiar para `public/materiais/`, gerar a capa e acrescentar em `src/data/materiais.ts`.
 - **Tamanho da ficha (176 MB)**: fica fora do repositório no GitHub (limite de 100 MB; ver `.gitignore` e README) e deve ser enviada direto à hospedagem, que também pode limitar o tamanho por arquivo.
 - **Direitos de distribuição**: as apostilas são de editoras (Edições SM, SAS, Objetivo); confirmar autorização para publicação aberta.

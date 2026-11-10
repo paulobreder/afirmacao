@@ -20,7 +20,7 @@ Outros comandos: `npm run build` (gera `dist/`), `npm run preview` (serve o buil
 ## Estrutura
 
 - `src/pages/` — Início, Materiais, Material (visualizador), Guia do Estudante, Sobre, 404.
-- `src/components/` — Header, Footer, Logo (SVG oficial), MaterialCard, PdfViewer.
+- `src/components/` — Header, Footer, Logo (arquivo original da coordenação), MaterialCard, PdfViewer.
 - `src/data/materiais.ts` — catálogo da biblioteca.
 - `src/data/guia.ts` — conteúdo do Guia do Estudante.
 - `public/materiais/` — cópias dos PDFs (nomes sem acento). `public/capas/` — capas em WebP.

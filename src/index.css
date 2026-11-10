@@ -1,24 +1,28 @@
 @import "tailwindcss";
 
-/* Design system AfirmAção — tokens oficiais da prancha aprovada */
+/* Design system AfirmAção — paleta institucional da coordenação (laranja, vermelho, amarelo e branco) */
 @theme {
-  --color-brand: #2b50cc;
-  --color-brand-strong: #2242ad;
-  --color-brand-soft: #eaeffb;
-  --color-brand-tint: #f2f5fd;
-  --color-action: #d94d45;
-  --color-action-strong: #b9372f;
-  --color-action-soft: #fcecea;
-  --color-energy: #f2b544;
-  --color-energy-soft: #fdf4e1;
-  --color-navy: #182942;
-  --color-ink: #182942;
-  --color-ink-muted: #4a5a72;
-  --color-ink-subtle: #66758c;
-  --color-ice: #f7f9fc;
+  /* Laranja #F57C00: interação. Em botões e textos usa-se o tom escuro para manter contraste AA. */
+  --color-brand: #b85600;
+  --color-brand-strong: #9a4700;
+  --color-brand-bright: #f57c00;
+  --color-brand-soft: #ffebd6;
+  --color-brand-tint: #fff5ed;
+  /* Vermelho #DB3831: marca e ênfase. */
+  --color-action: #db3831;
+  --color-action-strong: #b42a24;
+  --color-action-soft: #fdecea;
+  /* Amarelo #F1B521: marca e detalhes. */
+  --color-energy: #f1b521;
+  --color-energy-soft: #fef5dc;
+  /* Neutros funcionais (texto, ícones, linhas e fundos) — não são cores institucionais. */
+  --color-ink: #2a2523;
+  --color-ink-muted: #57514d;
+  --color-ink-subtle: #6e6863;
+  --color-paper: #f8f7f5;
   --color-surface: #ffffff;
-  --color-line: #e2e7f0;
-  --color-line-strong: #cdd5e2;
+  --color-line: #eae5df;
+  --color-line-strong: #d8d0c7;
 
   --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -26,9 +30,9 @@
   --radius-card: 1.25rem;
   --radius-panel: 1.75rem;
 
-  --shadow-soft: 0 1px 2px rgb(24 41 66 / 0.04), 0 4px 16px -4px rgb(24 41 66 / 0.08);
-  --shadow-lift: 0 2px 4px rgb(24 41 66 / 0.04), 0 18px 40px -12px rgb(24 41 66 / 0.18);
-  --shadow-brand: 0 10px 24px -10px rgb(43 80 204 / 0.55);
+  --shadow-soft: 0 1px 2px rgb(42 37 35 / 0.04), 0 4px 16px -4px rgb(42 37 35 / 0.08);
+  --shadow-lift: 0 2px 4px rgb(42 37 35 / 0.04), 0 18px 40px -12px rgb(42 37 35 / 0.18);
+  --shadow-brand: 0 10px 24px -10px rgb(184 86 0 / 0.45);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -40,13 +44,13 @@
     scroll-padding-top: 6rem;
   }
   body {
-    @apply bg-ice text-ink font-sans antialiased;
+    @apply bg-paper text-ink font-sans antialiased;
     font-size: 1rem;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4 {
-    @apply font-display text-navy;
+    @apply font-display text-ink;
     text-wrap: balance;
     letter-spacing: -0.02em;
   }
@@ -56,7 +60,7 @@
     outline-offset: 3px;
     border-radius: 6px;
   }
-  ::selection { background: var(--color-energy-soft); color: var(--color-navy); }
+  ::selection { background: var(--color-energy-soft); color: var(--color-ink); }
   a, button, summary, [role="button"] { touch-action: manipulation; }
 }
 
@@ -71,8 +75,8 @@
   .btn:active { transform: translateY(1px) scale(0.99); }
   .btn:disabled { opacity: 0.45; pointer-events: none; box-shadow: none; }
   .btn-primary { @apply bg-brand text-white; box-shadow: var(--shadow-brand); }
-  .btn-primary:hover { @apply bg-brand-strong; }
-  .btn-secondary { @apply bg-surface text-navy ring-1 ring-line-strong; }
+  .btn-primary:hover { @apply bg-action; }
+  .btn-secondary { @apply bg-surface text-ink ring-1 ring-line-strong; }
   .btn-secondary:hover { @apply ring-brand text-brand; }
   .btn-ghost { @apply text-brand; }
   .btn-ghost:hover { @apply bg-brand-soft; }
@@ -90,7 +94,7 @@
     transition: background-color 150ms, color 150ms, box-shadow 150ms;
   }
   .chip:hover { @apply text-brand ring-brand; }
-  .chip[aria-pressed="true"], .chip[aria-current="true"] { @apply bg-navy text-white ring-navy; }
+  .chip[aria-pressed="true"], .chip[aria-current="true"] { @apply bg-brand text-white ring-brand; }
   .link-arrow { @apply inline-flex items-center gap-1.5 font-semibold text-brand; }
   .link-arrow svg { transition: transform 200ms var(--ease-out); }
   .link-arrow:hover svg, .group:hover .link-arrow svg { transform: translateX(3px); }
@@ -98,7 +102,7 @@
 
 /* Linhas onduladas discretas, inspiradas na referência */
 .bg-waves {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640' fill='none' stroke='%23182942' stroke-opacity='.07'%3E%3Cpath d='M40 640c80-160 220-120 300-260S500 120 640 60'/%3E%3Cpath d='M100 640c80-160 220-120 300-260S560 120 700 60'/%3E%3Cpath d='M160 640c80-160 220-120 300-260S620 120 760 60'/%3E%3Cpath d='M220 640c80-160 220-120 300-260S680 120 820 60'/%3E%3Cpath d='M280 640c80-160 220-120 300-260S740 120 880 60'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640' fill='none' stroke='%232a2523' stroke-opacity='.07'%3E%3Cpath d='M40 640c80-160 220-120 300-260S500 120 640 60'/%3E%3Cpath d='M100 640c80-160 220-120 300-260S560 120 700 60'/%3E%3Cpath d='M160 640c80-160 220-120 300-260S620 120 760 60'/%3E%3Cpath d='M220 640c80-160 220-120 300-260S680 120 820 60'/%3E%3Cpath d='M280 640c80-160 220-120 300-260S740 120 880 60'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right -80px top -40px;
 }

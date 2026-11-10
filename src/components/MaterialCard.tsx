@@ -29,9 +29,9 @@ export function MaterialCard({ material, headingLevel = 'h3' }: { material: Mate
           decoding="async"
           width={480}
           height={645}
-          className="h-auto w-full rounded-[4px] bg-white shadow-[0_6px_16px_-6px_rgb(24_41_66/0.35)] ring-1 ring-black/5 transition-transform duration-500 ease-[var(--ease-out)] sm:absolute sm:bottom-0 sm:left-1/2 sm:h-[84%] sm:w-auto sm:-translate-x-1/2 sm:translate-y-[6%] sm:rounded-t-[6px] sm:rounded-b-none sm:object-cover sm:shadow-[0_12px_28px_-8px_rgb(24_41_66/0.35)] sm:group-hover:translate-y-[2%]"
+          className="h-auto w-full rounded-[4px] bg-white shadow-[0_6px_16px_-6px_rgb(42_37_35/0.35)] ring-1 ring-black/5 transition-transform duration-500 ease-[var(--ease-out)] sm:absolute sm:bottom-0 sm:left-1/2 sm:h-[84%] sm:w-auto sm:-translate-x-1/2 sm:translate-y-[6%] sm:rounded-t-[6px] sm:rounded-b-none sm:object-cover sm:shadow-[0_12px_28px_-8px_rgb(42_37_35/0.35)] sm:group-hover:translate-y-[2%]"
         />
-        <span className="absolute top-3 left-3 hidden rounded-full bg-white sm:inline-block px-3 py-1 text-xs font-semibold text-navy shadow-sm">
+        <span className="absolute top-3 left-3 hidden rounded-full bg-white sm:inline-block px-3 py-1 text-xs font-semibold text-ink shadow-sm">
           {categoria.nomeCurto}
         </span>
       </div>
@@ -87,7 +87,7 @@ export function MaterialCard({ material, headingLevel = 'h3' }: { material: Mate
           </a>
         </div>
       ) : (
-        <p className="relative z-10 col-span-2 mx-4 mb-4 flex items-start gap-2 rounded-xl bg-ice px-3 py-2.5 text-[0.85rem] font-medium text-ink-muted sm:mx-5 sm:mb-5">
+        <p className="relative z-10 col-span-2 mx-4 mb-4 flex items-start gap-2 rounded-xl bg-paper px-3 py-2.5 text-[0.85rem] font-medium text-ink-muted sm:mx-5 sm:mb-5">
           <CircleAlert className="mt-0.5 size-4 shrink-0 text-action-strong" aria-hidden />
           Arquivo temporariamente indisponível nesta versão do site.
         </p>

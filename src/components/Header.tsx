@@ -31,12 +31,12 @@ export function Header() {
   return (
     <header
       className={`sticky top-0 z-40 border-b transition-[background-color,border-color,box-shadow] duration-200 ${
-        scrolled || open ? 'border-line bg-white/95 shadow-[0_1px_0_rgb(24_41_66/0.02)] backdrop-blur' : 'border-transparent bg-ice'
+        scrolled || open ? 'border-line bg-white/95 shadow-[0_1px_0_rgb(42_37_35/0.02)] backdrop-blur' : 'border-transparent bg-paper'
       }`}
     >
       <div className="container-site flex h-[72px] items-center justify-between gap-4">
         <Link to="/" className="shrink-0 rounded-lg" aria-label="AfirmAção — página inicial">
-          <Logo />
+          <Logo className="h-16 w-auto" decorativa />
         </Link>
 
         <nav aria-label="Principal" className="hidden md:block">
@@ -48,7 +48,7 @@ export function Header() {
                   end={item.end}
                   className={({ isActive }) =>
                     `relative inline-flex min-h-11 items-center rounded-full px-3.5 text-[0.95rem] font-medium transition-colors lg:px-4 ${
-                      isActive ? 'text-brand' : 'text-ink-muted hover:text-navy'
+                      isActive ? 'text-brand' : 'text-ink-muted hover:text-ink'
                     }`
                   }
                 >
@@ -73,7 +73,7 @@ export function Header() {
           </Link>
           <button
             type="button"
-            className="inline-flex size-12 items-center justify-center rounded-full text-navy hover:bg-brand-soft md:hidden"
+            className="inline-flex size-12 items-center justify-center rounded-full text-ink hover:bg-brand-soft md:hidden"
             aria-expanded={open}
             aria-controls="menu-mobile"
             aria-label={open ? 'Fechar menu' : 'Abrir menu'}
@@ -98,7 +98,7 @@ export function Header() {
                 end={item.end}
                 className={({ isActive }) =>
                   `flex min-h-12 items-center rounded-xl px-4 text-base font-semibold ${
-                    isActive ? 'bg-brand-soft text-brand' : 'text-navy hover:bg-ice'
+                    isActive ? 'bg-brand-soft text-brand' : 'text-ink hover:bg-paper'
                   }`
                 }
               >

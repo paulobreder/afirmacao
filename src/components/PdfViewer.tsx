@@ -164,7 +164,7 @@ export function PdfViewer({ url, titulo, totalPaginas, pagina, onPaginaChange, d
         <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-action-soft text-action-strong">
           <CircleAlert className="size-7" aria-hidden />
         </span>
-        <p className="mt-5 font-display text-xl font-bold text-navy">Este arquivo está indisponível no momento</p>
+        <p className="mt-5 font-display text-xl font-bold text-ink">Este arquivo está indisponível no momento</p>
         <p className="mx-auto mt-2 max-w-md text-ink-muted">
           Não encontramos o PDF de “{titulo}” no servidor. Tente novamente mais tarde ou escolha outro material.
         </p>
@@ -178,7 +178,7 @@ export function PdfViewer({ url, titulo, totalPaginas, pagina, onPaginaChange, d
         <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-action-soft text-action-strong">
           <CircleAlert className="size-7" aria-hidden />
         </span>
-        <p className="mt-5 font-display text-xl font-bold text-navy">Não foi possível mostrar o PDF aqui</p>
+        <p className="mt-5 font-display text-xl font-bold text-ink">Não foi possível mostrar o PDF aqui</p>
         <p className="mx-auto mt-2 max-w-md text-ink-muted">
           Seu navegador pode não ser compatível com o visualizador ou a conexão caiu. Você ainda pode abrir o arquivo no
           leitor do próprio aparelho ou baixá-lo.
@@ -196,7 +196,7 @@ export function PdfViewer({ url, titulo, totalPaginas, pagina, onPaginaChange, d
   }
 
   const botao =
-    'inline-flex size-11 items-center justify-center rounded-full text-navy transition-colors hover:bg-brand-soft hover:text-brand disabled:pointer-events-none disabled:opacity-40'
+    'inline-flex size-11 items-center justify-center rounded-full text-ink transition-colors hover:bg-brand-soft hover:text-brand disabled:pointer-events-none disabled:opacity-40'
 
   return (
     <div ref={topoRef} className="scroll-mt-[88px]">
@@ -230,7 +230,7 @@ export function PdfViewer({ url, titulo, totalPaginas, pagina, onPaginaChange, d
               value={paginaDigitada}
               onChange={(e) => setDigitando(e.target.value)}
               onBlur={() => setDigitando(null)}
-              className="h-10 w-14 rounded-lg sm:w-16 border-0 bg-ice text-center text-base font-semibold text-navy tabular-nums ring-1 ring-line focus:ring-2 focus:ring-brand focus:outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none"
+              className="h-10 w-14 rounded-lg sm:w-16 border-0 bg-paper text-center text-base font-semibold text-ink tabular-nums ring-1 ring-line focus:ring-2 focus:ring-brand focus:outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none"
             />
             <span className="whitespace-nowrap tabular-nums">de {numPaginas}</span>
           </form>
@@ -256,12 +256,12 @@ export function PdfViewer({ url, titulo, totalPaginas, pagina, onPaginaChange, d
         tabIndex={0}
         onKeyDown={onKeyDown}
         aria-label={`${titulo}, página ${pagina} de ${numPaginas}. Use as setas do teclado para mudar de página.`}
-        className="relative mt-4 min-h-[60vh] overflow-x-auto rounded-2xl bg-[#e9edf4] p-2 sm:p-4"
+        className="relative mt-4 min-h-[60vh] overflow-x-auto rounded-2xl bg-[#ece8e3] p-2 sm:p-4"
       >
         {(status === 'loading' || !desenhado) && (
           <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4 text-center" role="status">
             <LoaderCircle className="size-9 animate-spin text-brand" aria-hidden />
-            <p className="font-medium text-navy">Abrindo o PDF…</p>
+            <p className="font-medium text-ink">Abrindo o PDF…</p>
             {progresso !== null && progresso < 100 && (
               <div className="h-2 w-48 overflow-hidden rounded-full bg-white" aria-hidden>
                 <div className="h-full rounded-full bg-brand transition-[width]" style={{ width: `${progresso}%` }} />
@@ -276,7 +276,7 @@ export function PdfViewer({ url, titulo, totalPaginas, pagina, onPaginaChange, d
           } ${renderizando ? 'opacity-60' : 'opacity-100'}`}
         />
         {desenhado && renderizando && (
-          <span className="pointer-events-none absolute top-6 right-6 flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-medium text-navy shadow" role="status">
+          <span className="pointer-events-none absolute top-6 right-6 flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-medium text-ink shadow" role="status">
             <LoaderCircle className="size-4 animate-spin text-brand" aria-hidden /> Carregando página…
           </span>
         )}
