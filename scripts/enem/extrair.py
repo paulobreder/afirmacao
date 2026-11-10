@@ -107,25 +107,41 @@ def _linhas(page):
     return out
 
 
-def _layout(doc):
-    """Colunas (x) e faixa útil (y) da página, inferidas dos cabeçalhos de questão."""
+def _layout(doc, paridade=None):
+    """Colunas (x) inferidas dos cabeçalhos de questão. Algumas edições (2025) espelham
+    as margens entre páginas pares e ímpares, então o cálculo é feito por paridade."""
+    W = doc[0].rect.width
     xs = []
-    for p in doc:
+    for pno, p in enumerate(doc):
+        if paridade is not None and pno % 2 != paridade:
+            continue
         for r, t in _linhas(p):
             if RE_CAB.match(t.strip()):
                 xs.append(r.x0)
-    W = doc[0].rect.width
+    if not any(x < W / 2 for x in xs) or not any(x > W / 2 for x in xs):
+        return _layout(doc) if paridade is not None else None
     esq = min(x for x in xs if x < W / 2)
     dir_ = min(x for x in xs if x > W / 2)
     fim_esq, ini_dir = dir_ - 6, dir_ - 4
     # filete vertical entre as colunas: fica fora dos dois recortes
-    for p in list(doc)[1:6]:
+    for pno, p in enumerate(list(doc)[1:8], start=1):
+        if paridade is not None and pno % 2 != paridade:
+            continue
         for d in p.get_drawings():
             r = d['rect']
-            if r.width < 3 and r.height > 150 and esq + 100 < r.x0 < dir_:
+            if r.width < 3 and r.height > p.rect.height * 0.6 and esq + 100 < r.x0 < dir_:
                 fim_esq = min(fim_esq, r.x0 - 1.5)
                 ini_dir = max(ini_dir, r.x1 + 1.5)
-    return [(esq - 8, fim_esq), (ini_dir, W - esq + 6)]
+    # borda direita: a maior extensão real de texto (margens espelhadas não são simétricas)
+    direita = W - esq + 6
+    for pno, p in enumerate(doc):
+        if pno == 0 or (paridade is not None and pno % 2 != paridade):
+            continue
+        topo, base = _faixa_util(p)
+        for r, t in _linhas(p):
+            if topo <= r.y0 and r.y1 <= base and r.width < W * 0.9 and len(t.strip()) > 2:
+                direita = max(direita, min(r.x1 + 3, W - 2))
+    return [(esq - 8, fim_esq), (ini_dir, direita)]
 
 
 def _faixa_util(page):
@@ -194,6 +210,66 @@ def _cruzamentos(page, rect):
     return probs
 
 
+def _composto(page, rect, cols, faixa):
+    """Recorte composto para questões com figura/tabela/texto em largura total:
+    as faixas onde há elementos atravessando o vão entre colunas são recortadas na
+    largura total; o restante, só na coluna da questão (posição original preservada).
+    Só aceita quando a outra coluna está VAZIA nessas faixas — nunca mistura questões.
+    Devolve (imagem, textos) ou None."""
+    W = page.rect.width
+    xL, xR = cols[0][0], cols[1][1]
+    linhas = [(r, t) for r, t in _linhas(page) if len(t.strip()) > 1]
+    elems = [r for r, _ in linhas] + [fitz.Rect(i['bbox']) for i in page.get_image_info()] + \
+            [d['rect'] for d in page.get_drawings() if not (d['rect'].width < 3 and d['rect'].height > 100)]
+    cruzam = []
+    for r in elems:
+        if r.width > W * 0.9:
+            continue
+        inter = fitz.Rect(r) & rect
+        if inter.is_empty or inter.height < 4 or not (r.x0 < rect.x0 - 3 or r.x1 > rect.x1 + 3):
+            continue
+        if r.x0 < xL - 3 or r.x1 > xR + 3 or r.y0 < rect.y0 - 2 or r.y1 > rect.y1 + 2:
+            return None
+        cruzam.append(fitz.Rect(r))
+    if not cruzam:
+        return None
+    faixas = []
+    for r in sorted(cruzam, key=lambda r: r.y0):
+        a, b = max(r.y0 - 3, rect.y0), min(r.y1 + 3, rect.y1)
+        if faixas and a <= faixas[-1][1]:
+            faixas[-1][1] = max(faixas[-1][1], b)
+        else:
+            faixas.append([a, b])
+    for a, b in faixas:
+        banda = fitz.Rect(xL, a, xR, b)
+        for r in elems:
+            inter = fitz.Rect(r) & banda
+            if inter.is_empty or inter.height < 3 or inter.width < 2:
+                continue
+            fora = r.x0 >= rect.x1 - 1 or r.x1 <= rect.x0 + 1  # só na outra coluna
+            if fora:
+                return None  # a outra coluna tem conteúdo nessa faixa: não dá para recortar sem misturar
+    Z = ZOOM
+    larg, alt = int((xR - xL) * Z) + 1, int((rect.y1 - rect.y0) * Z) + 1
+    tela = Image.new('RGB', (larg, alt), 'white')
+
+    def colar(clip, x_dest):
+        pix = page.get_pixmap(matrix=fitz.Matrix(Z, Z), clip=clip, alpha=False)
+        tela.paste(Image.open(io.BytesIO(pix.tobytes('png'))), (int((x_dest - xL) * Z), int((clip.y0 - rect.y0) * Z)))
+
+    y = rect.y0
+    for a, b in faixas + [[rect.y1, rect.y1]]:
+        if a - y > 1:
+            colar(fitz.Rect(rect.x0, y, rect.x1, a), rect.x0)
+        if b - a > 1:
+            colar(fitz.Rect(xL, a, xR, b), xL)
+        y = b
+    area = [rect] + [fitz.Rect(xL, a, xR, b) for a, b in faixas]
+    textos = [t for r, t in sorted(linhas, key=lambda z: (z[0].y0, z[0].x0))
+              if any(ar.contains(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2)) for ar in area)]
+    return tela, textos
+
+
 def _cortar_apos_E(doc, colunas, segs, ultima):
     """Descarta colunas posteriores à da alternativa E; na última questão do caderno,
     encerra o recorte logo após o bloco da alternativa E."""
@@ -221,10 +297,13 @@ def _cortar_apos_E(doc, colunas, segs, ultima):
 def extrair(ano: int, dia: int) -> list[dict]:
     pdf = CACHE / str(ano) / f'D{dia}_prova.pdf'
     doc = fitz.open(pdf)
-    colunas2 = _layout(doc)
+    por_paridade = {0: _layout(doc, 0), 1: _layout(doc, 1)}
     faixas_pag = [_faixa_util(p) for p in doc]
     # Páginas em coluna única (layout de largura total) usam um só recorte por página
-    cols_pag = [[(colunas2[0][0], colunas2[1][1])] if _coluna_unica(p, faixas_pag[i]) else colunas2 for i, p in enumerate(doc)]
+    cols_pag = []
+    for i, p in enumerate(doc):
+        c2 = por_paridade[i % 2]
+        cols_pag.append([(c2[0][0], c2[1][1])] if _coluna_unica(p, faixas_pag[i]) else c2)
     gab = ler_gabarito(CACHE / str(ano) / f'D{dia}_gabarito.pdf', ano, dia)
     lingua0 = primeira_lingua(ano, dia)
 
@@ -282,16 +361,25 @@ def extrair(ano: int, dia: int) -> list[dict]:
 
         segs = _cortar_apos_E(doc, cols_pag, segs, ultima=not any(e[3] == 'q' for e in eventos[k + 1:]))
         imagens, textos, problemas = [], [], []
+        compostos = 0
         if len(segs) > 3:
             problemas.append('questão em mais de 3 colunas')
         for i, (pno, col, y0, y1) in enumerate(segs):
             page = doc[pno]
             x0, x1 = cols_pag[pno][col]
             rect = fitz.Rect(x0, y0, x1, y1)
-            textos += [t for r, t in _linhas(page) if rect.contains(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2))]
-            problemas += _cruzamentos(page, rect)
-            pix = page.get_pixmap(matrix=fitz.Matrix(ZOOM, ZOOM), clip=rect, alpha=False)
-            img = _aparar(Image.open(io.BytesIO(pix.tobytes('png'))))
+            probs = _cruzamentos(page, rect)
+            comp = _composto(page, rect, cols_pag[pno], faixas_pag[pno]) if probs and len(cols_pag[pno]) == 2 else None
+            if comp:
+                bruta, ts = comp
+                textos += ts
+                compostos += 1
+            else:
+                textos += [t for r, t in _linhas(page) if rect.contains(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2))]
+                problemas += probs
+                pix = page.get_pixmap(matrix=fitz.Matrix(ZOOM, ZOOM), clip=rect, alpha=False)
+                bruta = Image.open(io.BytesIO(pix.tobytes('png')))
+            img = _aparar(bruta)
             if img is None:
                 continue
             nome = f'{qid}-{i + 1}.webp' if len(segs) > 1 else f'{qid}.webp'
@@ -321,7 +409,7 @@ def extrair(ano: int, dia: int) -> list[dict]:
             'id': qid, 'ano': ano, 'dia': dia, 'caderno': 1 if dia == 1 else 7, 'cor': 'Azul',
             'numero': numero, 'area': area, 'lingua': lingua, 'gabarito': gabarito,
             'paginas': sorted({s[0] + 1 for s in segs}), 'imagens': imagens,
-            'texto': texto, 'problemas': sorted(set(problemas)),
+            'texto': texto, 'problemas': sorted(set(problemas)), 'recorte_composto': compostos,
         })
     return questoes
 
@@ -352,7 +440,7 @@ def processar(ano: int, dia: int, forcar=False) -> list[dict]:
     """Checkpoint: não reprocessa um dia já extraído com as mesmas fontes."""
     saida = CACHE / str(ano) / f'D{dia}_questoes.json'
     fontes = json.loads((CACHE / str(ano) / 'fontes.json').read_text())['dias'][str(dia)]
-    assinatura = [fontes.get('prova_sha256'), fontes.get('gabarito_sha256'), ZOOM, QUALIDADE_WEBP, 8]
+    assinatura = [fontes.get('prova_sha256'), fontes.get('gabarito_sha256'), ZOOM, QUALIDADE_WEBP, 11]
     if saida.exists() and not forcar:
         dados = json.loads(saida.read_text())
         if dados.get('assinatura') == assinatura:

@@ -58,6 +58,10 @@ def classificar(qs: list[dict], revisao: dict) -> list[dict]:
             motivos.append('gabarito inválido')
         if not q['texto'] or len(q['texto']) < 40:
             motivos.append('enunciado não extraído')
+        if q.get('recorte_composto'):
+            # Auditoria de 10/11/2026: em páginas com faixa em largura total a ordem de leitura
+            # não segue as colunas, e o recorte composto omitiu conteúdo (ex.: 2019-MT-179).
+            motivos.append('recorte composto em página com faixa em largura total: requer conferência manual')
         if q.get('gabarito_conferencia') == 'posicao' and q['gabarito'] != 'ANULADA':
             motivos.append('gabarito confirmado por uma só leitura')
         dup = [i for i in por_texto.get(_norm(q['texto']), []) if i != q['id']]

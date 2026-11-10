@@ -1,4 +1,4 @@
-import { copyFileSync, readdirSync, rmSync, statSync } from 'node:fs'
+import { copyFileSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -31,9 +31,19 @@ const todosPdfs = readdirSync(pastaPdfs).filter((f) => f.endsWith('.pdf'))
 const pdfsDisponiveis = todosPdfs.filter((f) => !paraGithub || statSync(resolve(pastaPdfs, f)).size < LIMITE_GITHUB)
 const pdfsExcluidos = todosPdfs.filter((f) => !pdfsDisponiveis.includes(f))
 
+// Rotas conhecidas recebem uma cópia do index.html, para que o GitHub Pages as sirva
+// com status 200 (sem isso, links diretos funcionam mas chegam como "404" para buscadores).
+const slugs = [...readFileSync(resolve(import.meta.dirname, 'src/data/materiais.ts'), 'utf8').matchAll(/(?:revisao|raioX)\('([a-z0-9-]+)'|slug: '([a-z0-9-]+)'/g)].map((m) => m[1] ?? m[2])
+const rotasEstaticas = [
+  'materiais', 'guia', 'sobre',
+  'simulados', 'simulados/dia-1', 'simulados/dia-2', 'simulados/redacao', 'simulados/desempenho',
+  ...slugs.map((s) => `materiais/${s}`),
+]
+
 /**
  * Ajustes do build: o GitHub Pages serve o 404.html para rotas desconhecidas
- * (ele precisa ser o próprio app) e não aceita os PDFs excluídos acima.
+ * (ele precisa ser o próprio app), cada rota conhecida ganha seu index.html,
+ * e os PDFs excluídos acima não são publicados.
  */
 function ajustesPublicacao(): Plugin {
   let outDir = 'dist'
@@ -43,6 +53,10 @@ function ajustesPublicacao(): Plugin {
     configResolved: (config) => void (outDir = config.build.outDir),
     closeBundle: () => {
       copyFileSync(resolve(outDir, 'index.html'), resolve(outDir, '404.html'))
+      for (const rota of rotasEstaticas) {
+        mkdirSync(resolve(outDir, rota), { recursive: true })
+        copyFileSync(resolve(outDir, 'index.html'), resolve(outDir, rota, 'index.html'))
+      }
       for (const f of pdfsExcluidos) rmSync(resolve(outDir, 'materiais', f), { force: true })
     },
   }

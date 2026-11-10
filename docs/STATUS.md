@@ -36,5 +36,5 @@ Cópias com nomes sem acento em `public/materiais/`; capas geradas em `public/ca
 - **Foto da estudante**: o caderno ainda mostra a logo anterior (mantido por decisão da coordenação até novo pedido).
 - **Segunda ficha de resumo não encontrada**: a pasta tem apenas `Ficha resumo objetivo -1.pdf` (volume 1). Ao receber a outra, copiar para `public/materiais/`, gerar a capa e acrescentar em `src/data/materiais.ts`.
 - **Tamanho da ficha (176 MB)**: fica fora do repositório no GitHub (limite de 100 MB; ver `.gitignore` e README) e deve ser enviada direto à hospedagem, que também pode limitar o tamanho por arquivo.
-- **Direitos de distribuição**: as apostilas são de editoras (Edições SM, SAS, Objetivo); confirmar autorização para publicação aberta.
+- ~~Direitos de distribuição~~: **aprovado pela coordenação em 10/11/2026** (apostilas das editoras e questões do ENEM com textos de terceiros).
 - Guia: regras e valores de programas mudam a cada edição; revisar a cada novo edital.
