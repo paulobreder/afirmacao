@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, BadgeCheck, CircleCheck, Compass, FileCheck2, Smartphone, UserRoundX } from 'lucide-react'
+import { ArrowRight, BadgeCheck, CircleCheck, ClipboardCheck, Compass, FileCheck2, Smartphone, UserRoundX } from 'lucide-react'
 import { Seo } from '../components/Seo'
 import { Logo } from '../components/Logo'
 import { MaterialCard } from '../components/MaterialCard'
@@ -28,6 +28,7 @@ export default function Home() {
       <Seo description="Materiais gratuitos de revisão, Raio-X com questões resolvidas, resumos e orientações para ingressar no ensino superior. Seu caminho gratuito para o ENEM." />
       <Hero />
       <Categorias />
+      <AcessoSimulados />
       <GuiaDestaque />
       <Sugestoes />
       <Institucional />
@@ -233,6 +234,31 @@ function Categorias() {
             )
           })}
         </ul>
+      </div>
+    </section>
+  )
+}
+
+/** Acesso discreto ao módulo de simulados (faixa compacta, sem alterar as seções aprovadas). */
+function AcessoSimulados() {
+  return (
+    <section aria-label="Simulados" className="bg-white pb-16 md:pb-20">
+      <div className="container-site">
+        <Link
+          to="/simulados"
+          className="group flex flex-col gap-4 rounded-[var(--radius-card)] bg-paper p-5 ring-1 ring-line transition-shadow hover:shadow-[var(--shadow-soft)] sm:flex-row sm:items-center sm:gap-5 sm:p-6"
+        >
+          <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white text-brand ring-1 ring-line">
+            <ClipboardCheck className="size-6" aria-hidden />
+          </span>
+          <span className="flex-1">
+            <span className="block font-display text-lg font-extrabold text-ink">Novo: simulados com questões oficiais do ENEM</span>
+            <span className="text-ink-muted">Primeiro e segundo dia, laboratório de redação e acompanhamento do seu desempenho.</span>
+          </span>
+          <span className="link-arrow">
+            Fazer um simulado <ArrowRight className="size-4" aria-hidden />
+          </span>
+        </Link>
       </div>
     </section>
   )

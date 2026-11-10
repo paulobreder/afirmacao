@@ -26,3 +26,7 @@ dist-ssr
 # PDF acima do limite de 100 MB do GitHub: fica fora do repositório
 # e deve ser copiado direto para a hospedagem (veja README).
 public/materiais/fichas-resumo-objetivo-1.pdf
+
+# Pipeline ENEM: ambiente Python e PDFs originais do INEP (baixados pelos scripts)
+.venv
+.enem-cache

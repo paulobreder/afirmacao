@@ -13,6 +13,7 @@ _Última atualização: 9 de novembro de 2026 — primeira versão completa._
 - **Guia do Estudante** (`/guia`): conteúdo integral do documento informativo, com checklist de matrícula em destaque, cotas, ProUni/Fies, permanência (acordeões) e links oficiais.
 - **Sobre o Projeto** (`/sobre`): missão e proposta, sem fatos inventados.
 - **Identidade atualizada (10/11/2026):** logo institucional original (punho com lápis) em `public/img/marca/`, extraída da prancha da coordenação com fundo removido; favicon recortado do punho; paleta laranja `#F57C00`, vermelho `#DB3831`, amarelo `#F1B521` e branco (tokens em `src/index.css`). Layout, textos e funcionalidades inalterados.
+- **Simulados (10/11/2026):** módulo `/simulados` (1º e 2º dia, Laboratório de Redação, Meu Desempenho). Detalhes e números em `docs/STATUS-SIMULADOS.md`.
 
 ## Inventário de PDFs (`CONTEUDOS_SITE/rx-sociologia/`, 19 arquivos)
 | Categoria | Qtde | Arquivos |

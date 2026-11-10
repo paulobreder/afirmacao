@@ -1,0 +1,3115 @@
+{
+ "por_ano_area": {
+  "2016-CH": {
+   "validado": 39,
+   "pendente": 6
+  },
+  "2016-CN": {
+   "validado": 34,
+   "pendente": 11
+  },
+  "2016-LC": {
+   "validado": 50
+  },
+  "2016-MT": {
+   "validado": 42,
+   "pendente": 3
+  },
+  "2017-CH": {
+   "validado": 45
+  },
+  "2017-CN": {
+   "pendente": 26,
+   "validado": 19
+  },
+  "2017-LC": {
+   "validado": 48,
+   "pendente": 2
+  },
+  "2017-MT": {
+   "pendente": 24,
+   "validado": 21
+  },
+  "2018-CH": {
+   "validado": 40,
+   "pendente": 5
+  },
+  "2018-CN": {
+   "pendente": 12,
+   "validado": 33
+  },
+  "2018-LC": {
+   "validado": 50
+  },
+  "2018-MT": {
+   "validado": 36,
+   "pendente": 8,
+   "anulado": 1
+  },
+  "2019-CH": {
+   "validado": 45
+  },
+  "2019-CN": {
+   "validado": 37,
+   "pendente": 8
+  },
+  "2019-LC": {
+   "validado": 50
+  },
+  "2019-MT": {
+   "validado": 38,
+   "pendente": 7
+  },
+  "2020-CH": {
+   "validado": 45
+  },
+  "2020-CN": {
+   "validado": 36,
+   "pendente": 8,
+   "anulado": 1
+  },
+  "2020-LC": {
+   "validado": 50
+  },
+  "2020-MT": {
+   "validado": 35,
+   "pendente": 9,
+   "anulado": 1
+  },
+  "2021-CH": {
+   "validado": 42,
+   "pendente": 3
+  },
+  "2021-CN": {
+   "validado": 34,
+   "pendente": 11
+  },
+  "2021-LC": {
+   "validado": 48,
+   "pendente": 2
+  },
+  "2021-MT": {
+   "validado": 35,
+   "pendente": 9,
+   "anulado": 1
+  },
+  "2022-CH": {
+   "validado": 45
+  },
+  "2022-CN": {
+   "validado": 37,
+   "pendente": 8
+  },
+  "2022-LC": {
+   "validado": 48,
+   "pendente": 2
+  },
+  "2022-MT": {
+   "validado": 40,
+   "pendente": 4,
+   "anulado": 1
+  },
+  "2023-CH": {
+   "validado": 43,
+   "pendente": 2
+  },
+  "2023-CN": {
+   "validado": 33,
+   "pendente": 12
+  },
+  "2023-LC": {
+   "validado": 50
+  },
+  "2023-MT": {
+   "validado": 37,
+   "pendente": 7,
+   "anulado": 1
+  },
+  "2024-CH": {
+   "validado": 45
+  },
+  "2024-CN": {
+   "validado": 42,
+   "pendente": 2,
+   "anulado": 1
+  },
+  "2024-LC": {
+   "validado": 47,
+   "pendente": 3
+  },
+  "2024-MT": {
+   "validado": 43,
+   "pendente": 2
+  },
+  "2025-CH": {
+   "validado": 27,
+   "pendente": 18
+  },
+  "2025-CN": {
+   "pendente": 23,
+   "validado": 20,
+   "anulado": 2
+  },
+  "2025-LC": {
+   "validado": 29,
+   "pendente": 21
+  },
+  "2025-MT": {
+   "validado": 29,
+   "pendente": 15,
+   "anulado": 1
+  }
+ },
+ "totais": {
+  "validado": 1567,
+  "pendente": 273,
+  "anulado": 10
+ },
+ "nao_publicadas": [
+  {
+   "id": "2016-CH-015",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2016-CH-016",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2016-CH-035",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2016-CH-036",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2016-CH-044",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2016-CH-045",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2016-CN-049",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AABC)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    17
+   ]
+  },
+  {
+   "id": "2016-CN-050",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    17
+   ]
+  },
+  {
+   "id": "2016-CN-051",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2016-CN-052",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2016-CN-059",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABCABABCD)"
+   ],
+   "paginas": [
+    21
+   ]
+  },
+  {
+   "id": "2016-CN-075",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    26
+   ]
+  },
+  {
+   "id": "2016-CN-076",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    26
+   ]
+  },
+  {
+   "id": "2016-CN-077",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    27
+   ]
+  },
+  {
+   "id": "2016-CN-078",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    27
+   ]
+  },
+  {
+   "id": "2016-CN-085",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABC)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2016-CN-086",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2016-MT-162",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    25
+   ]
+  },
+  {
+   "id": "2016-MT-170",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2016-MT-171",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2017-LC-044",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2017-LC-045",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2017-CN-091",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    2
+   ]
+  },
+  {
+   "id": "2017-CN-092",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    2
+   ]
+  },
+  {
+   "id": "2017-CN-095",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    3
+   ]
+  },
+  {
+   "id": "2017-CN-096",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    3
+   ]
+  },
+  {
+   "id": "2017-CN-097",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2017-CN-098",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2017-CN-101",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    5
+   ]
+  },
+  {
+   "id": "2017-CN-104",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2017-CN-105",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AAAA)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6,
+    7
+   ]
+  },
+  {
+   "id": "2017-CN-106",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    7
+   ]
+  },
+  {
+   "id": "2017-CN-107",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AABC)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    7
+   ]
+  },
+  {
+   "id": "2017-CN-109",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2017-CN-110",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2017-CN-113",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    9
+   ]
+  },
+  {
+   "id": "2017-CN-114",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    9
+   ]
+  },
+  {
+   "id": "2017-CN-117",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2017-CN-118",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2017-CN-121",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    11
+   ]
+  },
+  {
+   "id": "2017-CN-122",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2017-CN-123",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2017-CN-124",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2017-CN-125",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    13
+   ]
+  },
+  {
+   "id": "2017-CN-126",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    13
+   ]
+  },
+  {
+   "id": "2017-CN-131",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2017-CN-132",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2017-CN-133",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2017-MT-136",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    16
+   ]
+  },
+  {
+   "id": "2017-MT-139",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    17
+   ]
+  },
+  {
+   "id": "2017-MT-140",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    17
+   ]
+  },
+  {
+   "id": "2017-MT-143",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2017-MT-144",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2017-MT-147",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    19
+   ]
+  },
+  {
+   "id": "2017-MT-148",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    19
+   ]
+  },
+  {
+   "id": "2017-MT-150",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    20
+   ]
+  },
+  {
+   "id": "2017-MT-152",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AAADBEC)"
+   ],
+   "paginas": [
+    21,
+    22
+   ]
+  },
+  {
+   "id": "2017-MT-153",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    22
+   ]
+  },
+  {
+   "id": "2017-MT-156",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    23
+   ]
+  },
+  {
+   "id": "2017-MT-159",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2017-MT-162",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    25
+   ]
+  },
+  {
+   "id": "2017-MT-163",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    25
+   ]
+  },
+  {
+   "id": "2017-MT-165",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABABAABC)",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    26
+   ]
+  },
+  {
+   "id": "2017-MT-167",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABAABC)"
+   ],
+   "paginas": [
+    26
+   ]
+  },
+  {
+   "id": "2017-MT-168",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    27
+   ]
+  },
+  {
+   "id": "2017-MT-169",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    27
+   ]
+  },
+  {
+   "id": "2017-MT-170",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2017-MT-172",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    29
+   ]
+  },
+  {
+   "id": "2017-MT-173",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2017-MT-174",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2017-MT-177",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2017-MT-178",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2018-CH-082",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    29
+   ]
+  },
+  {
+   "id": "2018-CH-083",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    29
+   ]
+  },
+  {
+   "id": "2018-CH-088",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2018-CH-089",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2018-CH-090",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2018-CN-091",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    2
+   ]
+  },
+  {
+   "id": "2018-CN-092",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    2
+   ]
+  },
+  {
+   "id": "2018-CN-106",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2018-CN-107",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2018-CN-108",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABCD)"
+   ],
+   "paginas": [
+    7
+   ]
+  },
+  {
+   "id": "2018-CN-110",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABC)"
+   ],
+   "paginas": [
+    7,
+    8
+   ]
+  },
+  {
+   "id": "2018-CN-116",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    9
+   ]
+  },
+  {
+   "id": "2018-CN-117",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    9
+   ]
+  },
+  {
+   "id": "2018-CN-125",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2018-CN-126",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABCA)",
+    "figura ultrapassa a coluna",
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2018-CN-127",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    13
+   ]
+  },
+  {
+   "id": "2018-CN-128",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    13
+   ]
+  },
+  {
+   "id": "2018-MT-139",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABABCD)",
+    "figura ultrapassa a coluna"
+   ],
+   "paginas": [
+    17
+   ]
+  },
+  {
+   "id": "2018-MT-140",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna"
+   ],
+   "paginas": [
+    17
+   ]
+  },
+  {
+   "id": "2018-MT-141",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AAB)"
+   ],
+   "paginas": [
+    17,
+    18
+   ]
+  },
+  {
+   "id": "2018-MT-156",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AABCD)"
+   ],
+   "paginas": [
+    23
+   ]
+  },
+  {
+   "id": "2018-MT-158",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AAB)"
+   ],
+   "paginas": [
+    23
+   ]
+  },
+  {
+   "id": "2018-MT-159",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ADBEC)"
+   ],
+   "paginas": [
+    24,
+    25
+   ]
+  },
+  {
+   "id": "2018-MT-163",
+   "status": "anulado",
+   "motivos": [],
+   "paginas": [
+    25
+   ]
+  },
+  {
+   "id": "2018-MT-170",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AAAABC)"
+   ],
+   "paginas": [
+    27,
+    28
+   ]
+  },
+  {
+   "id": "2018-MT-173",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABC)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    29,
+    30
+   ]
+  },
+  {
+   "id": "2019-CN-094",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    3
+   ]
+  },
+  {
+   "id": "2019-CN-095",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    3
+   ]
+  },
+  {
+   "id": "2019-CN-096",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (nenhuma)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    3
+   ]
+  },
+  {
+   "id": "2019-CN-110",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABCD)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2019-CN-111",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2019-CN-112",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2019-CN-124",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    13
+   ]
+  },
+  {
+   "id": "2019-CN-125",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    13
+   ]
+  },
+  {
+   "id": "2019-MT-139",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ADBEC)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2019-MT-163",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AB)"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2019-MT-173",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2019-MT-174",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2019-MT-178",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2019-MT-179",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2019-MT-180",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2020-CN-093",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABC)",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    3
+   ]
+  },
+  {
+   "id": "2020-CN-094",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    3
+   ]
+  },
+  {
+   "id": "2020-CN-102",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2020-CN-103",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2020-CN-104",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2020-CN-107",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AAB)"
+   ],
+   "paginas": [
+    7
+   ]
+  },
+  {
+   "id": "2020-CN-130",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    14
+   ]
+  },
+  {
+   "id": "2020-CN-131",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    14
+   ]
+  },
+  {
+   "id": "2020-CN-135",
+   "status": "anulado",
+   "motivos": [],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2020-MT-144",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABCD)"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2020-MT-155",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABCD)"
+   ],
+   "paginas": [
+    22
+   ]
+  },
+  {
+   "id": "2020-MT-156",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABC)"
+   ],
+   "paginas": [
+    22
+   ]
+  },
+  {
+   "id": "2020-MT-157",
+   "status": "anulado",
+   "motivos": [],
+   "paginas": [
+    23
+   ]
+  },
+  {
+   "id": "2020-MT-172",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna"
+   ],
+   "paginas": [
+    27
+   ]
+  },
+  {
+   "id": "2020-MT-173",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna"
+   ],
+   "paginas": [
+    27
+   ]
+  },
+  {
+   "id": "2020-MT-174",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2020-MT-175",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    29
+   ]
+  },
+  {
+   "id": "2020-MT-176",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AADBEC)"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2020-MT-177",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AAADBEC)"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2021-LC-003-esp",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    5
+   ]
+  },
+  {
+   "id": "2021-LC-005-esp",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    5
+   ]
+  },
+  {
+   "id": "2021-CH-074",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABCD)"
+   ],
+   "paginas": [
+    27,
+    28
+   ]
+  },
+  {
+   "id": "2021-CH-089",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2021-CH-090",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2021-CN-102",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ADBEC)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    5,
+    6
+   ]
+  },
+  {
+   "id": "2021-CN-106",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    7
+   ]
+  },
+  {
+   "id": "2021-CN-107",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AB)",
+    "figura ultrapassa a coluna",
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    7,
+    8
+   ]
+  },
+  {
+   "id": "2021-CN-119",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    11
+   ]
+  },
+  {
+   "id": "2021-CN-120",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    11
+   ]
+  },
+  {
+   "id": "2021-CN-121",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (nenhuma)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2021-CN-122",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2021-CN-123",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2021-CN-124",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    13
+   ]
+  },
+  {
+   "id": "2021-CN-125",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    13
+   ]
+  },
+  {
+   "id": "2021-CN-135",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ADEBC)"
+   ],
+   "paginas": [
+    16,
+    17
+   ]
+  },
+  {
+   "id": "2021-MT-137",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ADBEC)"
+   ],
+   "paginas": [
+    17
+   ]
+  },
+  {
+   "id": "2021-MT-138",
+   "status": "anulado",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABC)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18,
+    19
+   ]
+  },
+  {
+   "id": "2021-MT-142",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AB)"
+   ],
+   "paginas": [
+    19,
+    20
+   ]
+  },
+  {
+   "id": "2021-MT-147",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    21
+   ]
+  },
+  {
+   "id": "2021-MT-148",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABCABC)",
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    21,
+    22
+   ]
+  },
+  {
+   "id": "2021-MT-151",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AB)"
+   ],
+   "paginas": [
+    22,
+    23
+   ]
+  },
+  {
+   "id": "2021-MT-155",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2021-MT-156",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2021-MT-161",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    26
+   ]
+  },
+  {
+   "id": "2021-MT-162",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    27
+   ]
+  },
+  {
+   "id": "2022-LC-032",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2022-LC-033",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2022-CN-107",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2022-CN-108",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2022-CN-119",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2022-CN-120",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2022-CN-121",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2022-CN-130",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AABBCC)"
+   ],
+   "paginas": [
+    14
+   ]
+  },
+  {
+   "id": "2022-CN-131",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2022-CN-132",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2022-MT-137",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AAABBCCD)"
+   ],
+   "paginas": [
+    17
+   ]
+  },
+  {
+   "id": "2022-MT-141",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AAABBCCDD)"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2022-MT-151",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    22
+   ]
+  },
+  {
+   "id": "2022-MT-152",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    22
+   ]
+  },
+  {
+   "id": "2022-MT-157",
+   "status": "anulado",
+   "motivos": [],
+   "paginas": [
+    25
+   ]
+  },
+  {
+   "id": "2023-CH-089",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2023-CH-090",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    31
+   ]
+  },
+  {
+   "id": "2023-CN-110",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2023-CN-121",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2023-CN-122",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2023-CN-123",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    11
+   ]
+  },
+  {
+   "id": "2023-CN-124",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    11
+   ]
+  },
+  {
+   "id": "2023-CN-125",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2023-CN-126",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2023-CN-127",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2023-CN-132",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    14
+   ]
+  },
+  {
+   "id": "2023-CN-133",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2023-CN-134",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2023-CN-135",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2023-MT-139",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    17
+   ]
+  },
+  {
+   "id": "2023-MT-140",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    17
+   ]
+  },
+  {
+   "id": "2023-MT-164",
+   "status": "anulado",
+   "motivos": [],
+   "paginas": [
+    25
+   ]
+  },
+  {
+   "id": "2023-MT-166",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    26
+   ]
+  },
+  {
+   "id": "2023-MT-167",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    26
+   ]
+  },
+  {
+   "id": "2023-MT-174",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    29
+   ]
+  },
+  {
+   "id": "2023-MT-175",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    29
+   ]
+  },
+  {
+   "id": "2023-MT-180",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AABBCC)",
+    "figura ultrapassa a coluna"
+   ],
+   "paginas": [
+    31,
+    32
+   ]
+  },
+  {
+   "id": "2024-LC-035",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2024-LC-036",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2024-LC-044",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (E)"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2024-CN-113",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (nenhuma)",
+    "imagem ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2024-CN-114",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2024-CN-129",
+   "status": "anulado",
+   "motivos": [],
+   "paginas": [
+    13
+   ]
+  },
+  {
+   "id": "2024-MT-147",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (ABC)"
+   ],
+   "paginas": [
+    19
+   ]
+  },
+  {
+   "id": "2024-MT-149",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AABC)"
+   ],
+   "paginas": [
+    19
+   ]
+  },
+  {
+   "id": "2025-LC-001-esp",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2025-LC-002-esp",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2025-LC-003-esp",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2025-LC-011",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2025-LC-012",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2025-LC-013",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2025-LC-014",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2025-LC-016",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (nenhuma)"
+   ],
+   "paginas": [
+    9
+   ]
+  },
+  {
+   "id": "2025-LC-018",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2025-LC-019",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2025-LC-020",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2025-LC-021",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2025-LC-030",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    14
+   ]
+  },
+  {
+   "id": "2025-LC-031",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    14
+   ]
+  },
+  {
+   "id": "2025-LC-032",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    14
+   ]
+  },
+  {
+   "id": "2025-LC-033",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    14
+   ]
+  },
+  {
+   "id": "2025-LC-037",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    16
+   ]
+  },
+  {
+   "id": "2025-LC-038",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    16
+   ]
+  },
+  {
+   "id": "2025-LC-041",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2025-LC-042",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2025-LC-044",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (nenhuma)"
+   ],
+   "paginas": [
+    19
+   ]
+  },
+  {
+   "id": "2025-CH-050",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (nenhuma)"
+   ],
+   "paginas": [
+    23
+   ]
+  },
+  {
+   "id": "2025-CH-052",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2025-CH-053",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2025-CH-054",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2025-CH-055",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2025-CH-056",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2025-CH-067",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (nenhuma)"
+   ],
+   "paginas": [
+    27
+   ]
+  },
+  {
+   "id": "2025-CH-070",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2025-CH-071",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2025-CH-072",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2025-CH-073",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2025-CH-074",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2025-CH-075",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2025-CH-081",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2025-CH-082",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2025-CH-083",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2025-CH-084",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2025-CH-085",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2025-CN-091",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    2
+   ]
+  },
+  {
+   "id": "2025-CN-092",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    2
+   ]
+  },
+  {
+   "id": "2025-CN-093",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    2
+   ]
+  },
+  {
+   "id": "2025-CN-094",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    2
+   ]
+  },
+  {
+   "id": "2025-CN-099",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2025-CN-100",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2025-CN-101",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2025-CN-102",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2025-CN-103",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2025-CN-104",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    4
+   ]
+  },
+  {
+   "id": "2025-CN-107",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2025-CN-108",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    6
+   ]
+  },
+  {
+   "id": "2025-CN-113",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2025-CN-114",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2025-CN-115",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "id": "2025-CN-120",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2025-CN-121",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2025-CN-122",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2025-CN-123",
+   "status": "anulado",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "id": "2025-CN-127",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2025-CN-128",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "id": "2025-CN-132",
+   "status": "anulado",
+   "motivos": [],
+   "paginas": [
+    13
+   ]
+  },
+  {
+   "id": "2025-CN-133",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    14
+   ]
+  },
+  {
+   "id": "2025-CN-134",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    14
+   ]
+  },
+  {
+   "id": "2025-CN-135",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (A)"
+   ],
+   "paginas": [
+    15
+   ]
+  },
+  {
+   "id": "2025-MT-137",
+   "status": "pendente",
+   "motivos": [
+    "alternativas A–E não identificadas no texto (AABCD)"
+   ],
+   "paginas": [
+    16
+   ]
+  },
+  {
+   "id": "2025-MT-139",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2025-MT-140",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2025-MT-141",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2025-MT-142",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    18
+   ]
+  },
+  {
+   "id": "2025-MT-153",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    22
+   ]
+  },
+  {
+   "id": "2025-MT-154",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    22
+   ]
+  },
+  {
+   "id": "2025-MT-160",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2025-MT-161",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    24
+   ]
+  },
+  {
+   "id": "2025-MT-167",
+   "status": "pendente",
+   "motivos": [
+    "imagem ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    27
+   ]
+  },
+  {
+   "id": "2025-MT-168",
+   "status": "pendente",
+   "motivos": [
+    "figura ultrapassa a coluna",
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    27
+   ]
+  },
+  {
+   "id": "2025-MT-169",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    28
+   ]
+  },
+  {
+   "id": "2025-MT-173",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2025-MT-174",
+   "status": "anulado",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2025-MT-175",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  },
+  {
+   "id": "2025-MT-176",
+   "status": "pendente",
+   "motivos": [
+    "texto ultrapassa a coluna"
+   ],
+   "paginas": [
+    30
+   ]
+  }
+ ]
+}

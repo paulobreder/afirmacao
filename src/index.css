@@ -14,6 +14,8 @@
   --color-action-soft: #fdecea;
   /* Amarelo #F1B521: marca e detalhes. */
   --color-energy: #f1b521;
+  /* Estados funcionais (certo/errado) usados só no módulo de simulados — não são cores institucionais */
+  --color-ok: #2e7d43; --color-ok-soft: #e6f4ea; --color-ok-strong: #1e5b2e;
   --color-energy-soft: #fef5dc;
   /* Neutros funcionais (texto, ícones, linhas e fundos) — não são cores institucionais. */
   --color-ink: #2a2523;
