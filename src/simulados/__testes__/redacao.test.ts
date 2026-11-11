@@ -65,6 +65,13 @@ describe('análise determinística de redação', () => {
     expect(a.linhasEstimadas).toBe(estimarLinhas(TEXTO))
     expect(a.linhasEstimadas).toBeGreaterThanOrEqual(8)
   })
+  it('uma redação de tamanho real (cerca de 390 palavras em 5 parágrafos) cabe nas 30 linhas estimadas', () => {
+    const par = Array.from({ length: 78 }, (_, i) => `palavra${i}`).join(' ') + '.'
+    const real = Array.from({ length: 5 }, () => par).join('\n\n')
+    expect(analisar(real).palavras).toBe(390)
+    expect(estimarLinhas(real)).toBeLessThanOrEqual(30)
+    expect(analisar(real).avisos.some((a) => a.criterio === 'Extensão')).toBe(false)
+  })
   it('identifica conectivos por categoria e marcas da proposta de intervenção', () => {
     const a = analisar(TEXTO)
     expect(a.conectivos.porCategoria['Oposição']).toContain('por outro lado')

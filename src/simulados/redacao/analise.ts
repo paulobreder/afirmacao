@@ -5,7 +5,11 @@
  */
 import { normalizar } from '../../lib/format'
 
-export const CARACTERES_POR_LINHA = 68 // média aproximada de uma linha manuscrita na folha do ENEM
+/** Média aproximada de palavras por linha manuscrita na folha do ENEM (redações nota 1000
+ * costumam ter de 350 a 420 palavras em até 30 linhas). É estimativa: varia com a letra. */
+export const PALAVRAS_POR_LINHA = 13
+/** Margem da estimativa antes de avisar que o texto pode não caber. */
+export const LINHAS_TOLERANCIA = 2
 export const LINHAS_MAX = 30
 export const LINHAS_MIN = 7
 
@@ -78,7 +82,7 @@ export function estimarLinhas(texto: string) {
     .split(/\n+/)
     .map((p) => p.trim())
     .filter(Boolean)
-    .reduce((s, p) => s + Math.max(1, Math.ceil(p.length / CARACTERES_POR_LINHA)), 0)
+    .reduce((s, p) => s + Math.max(1, Math.ceil(palavrasDe(p).length / PALAVRAS_POR_LINHA)), 0)
 }
 
 export function analisar(texto: string, palavrasChave: string[] = []): Analise {
@@ -92,15 +96,15 @@ export function analisar(texto: string, palavrasChave: string[] = []): Analise {
   const paragrafos = pars.map((p) => ({
     palavras: palavrasDe(p).length,
     frases: frasesDe(p).length,
-    linhas: Math.max(1, Math.ceil(p.length / CARACTERES_POR_LINHA)),
+    linhas: Math.max(1, Math.ceil(palavrasDe(p).length / PALAVRAS_POR_LINHA)),
   }))
   const linhasEstimadas = estimarLinhas(limpo)
 
   // Extensão e estrutura (aproximadas)
   if (todas.length && linhasEstimadas < LINHAS_MIN)
     avisos.push({ criterio: 'Extensão', mensagem: `O texto ocupa cerca de ${linhasEstimadas} linha(s). No ENEM, redações com até 7 linhas recebem nota zero.` })
-  if (linhasEstimadas > LINHAS_MAX)
-    avisos.push({ criterio: 'Extensão', mensagem: `O texto ocupa cerca de ${linhasEstimadas} linhas; a folha do ENEM tem ${LINHAS_MAX}. Considere condensar.` })
+  if (linhasEstimadas > LINHAS_MAX + LINHAS_TOLERANCIA)
+    avisos.push({ criterio: 'Extensão', mensagem: `O texto ocuparia cerca de ${linhasEstimadas} linhas manuscritas (estimativa); a folha do ENEM tem ${LINHAS_MAX}. Confira escrevendo à mão ou considere condensar.` })
   if (pars.length && pars.length < 3)
     avisos.push({ criterio: 'Estrutura', mensagem: `Foram encontrados ${pars.length} parágrafo(s). O texto dissertativo-argumentativo costuma ter introdução, desenvolvimento e conclusão em parágrafos separados.` })
   paragrafos.forEach((p, i) => {

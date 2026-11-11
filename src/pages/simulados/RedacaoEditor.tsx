@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { AlertTriangle, ArrowLeft, CheckCircle2, Circle, Info, Loader2, Pencil, Timer } from 'lucide-react'
+import { AlertTriangle, ArrowLeft, CheckCircle2, Circle, Copy, Info, Loader2, Pencil, Timer } from 'lucide-react'
 import { Seo } from '../../components/Seo'
 import { redacoes } from '../../simulados/db'
 import { temaPorId } from '../../simulados/redacao/temas'
@@ -45,6 +45,22 @@ function Editor({ inicial }: { inicial: Redacao }) {
     setR(novo)
     await redacoes.salvar(novo)
   }, [])
+  const [copiado, setCopiado] = useState(false)
+
+  async function finalizar() {
+    await salvar({ ...r, finalizadaEm: Date.now(), atualizadaEm: Date.now() })
+    // leva o estudante direto para a análise
+    requestAnimationFrame(() => document.getElementById('resultado-analise')?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+  }
+  async function copiar() {
+    try {
+      await navigator.clipboard.writeText(r.texto)
+      setCopiado(true)
+      setTimeout(() => setCopiado(false), 3000)
+    } catch {
+      setCopiado(false)
+    }
+  }
 
   return (
     <>
@@ -64,15 +80,26 @@ function Editor({ inicial }: { inicial: Redacao }) {
             <EditorRedacao key={finalizada ? 'f' : 'e'} redacao={r} aoAtualizar={setR} bloqueado={finalizada} />
             <div className="mt-5 flex flex-wrap gap-3">
               {!finalizada ? (
-                <button type="button" className="btn btn-primary" disabled={!r.texto.trim()} onClick={() => salvar({ ...r, finalizadaEm: Date.now(), atualizadaEm: Date.now() })}>
-                  <CheckCircle2 className="size-5" aria-hidden /> Finalizar e analisar
+                <button type="button" className="btn btn-primary" disabled={!r.texto.trim()} onClick={finalizar}>
+                  <CheckCircle2 className="size-5" aria-hidden /> Finalizar e ver análise
                 </button>
               ) : (
-                <button type="button" className="btn btn-secondary" onClick={() => salvar({ ...r, finalizadaEm: null, atualizadaEm: Date.now() })}>
-                  <Pencil className="size-5" aria-hidden /> Voltar a editar
-                </button>
+                <>
+                  <button type="button" className="btn btn-secondary" onClick={() => salvar({ ...r, finalizadaEm: null, atualizadaEm: Date.now() })}>
+                    <Pencil className="size-5" aria-hidden /> Voltar a editar
+                  </button>
+                  <button type="button" className="btn btn-ghost" onClick={copiar}>
+                    <Copy className="size-5" aria-hidden /> {copiado ? 'Texto copiado' : 'Copiar texto para enviar ao professor'}
+                  </button>
+                </>
               )}
             </div>
+            {!finalizada && (
+              <p className="mt-3 text-sm text-ink-muted">
+                Ao finalizar, você recebe uma análise orientativa do texto e um checklist de autoavaliação. A ferramenta não dá nota de 0 a
+                1000.
+              </p>
+            )}
           </div>
 
           {finalizada && <Analise r={r} palavrasChave={tema?.palavrasChave ?? []} aoSalvar={salvar} />}
@@ -118,14 +145,20 @@ function Analise({ r, palavrasChave, aoSalvar }: { r: Redacao; palavrasChave: st
   const grupos = [...new Set(AUTOAVALIACAO.map((x) => x.grupo))]
   const marcados = Object.values(r.autoavaliacao).filter(Boolean).length
   return (
-    <section aria-labelledby="analise" className="mt-8 space-y-6">
+    <section id="resultado-analise" aria-labelledby="analise" className="mt-8 scroll-mt-28 space-y-6">
       <div className="flex items-start gap-3 rounded-[var(--radius-card)] bg-energy-soft p-5 text-ink">
         <Info className="mt-0.5 size-5 shrink-0 text-brand-strong" aria-hidden />
-        <p className="text-[0.95rem]">
-          <strong>Análise orientativa, feita por regras automáticas e sem inteligência artificial.</strong> Ela aponta características
-          verificáveis do texto (extensão, pontuação, repetições, conectivos) e não avalia a qualidade das ideias. Não é nota do ENEM e
-          não substitui a correção de um professor.
-        </p>
+        <div className="text-[0.95rem]">
+          <p>
+            <strong>Análise orientativa, feita por regras automáticas e sem inteligência artificial.</strong> Ela aponta características
+            verificáveis do texto (extensão, pontuação, repetições, conectivos) e não avalia a qualidade das ideias.
+          </p>
+          <p className="mt-2">
+            <strong>Por que não há nota?</strong> Uma nota confiável nas cinco competências do ENEM exige a leitura de um corretor. Para a
+            plataforma continuar gratuita e sem custo por estudante, não usamos correção automática paga. Para receber nota, copie o texto
+            e envie a um professor do cursinho.
+          </p>
+        </div>
       </div>
 
       <div className="rounded-[var(--radius-card)] bg-white p-6 ring-1 ring-line">
