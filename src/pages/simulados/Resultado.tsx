@@ -39,12 +39,14 @@ export default function Resultado() {
   if (t === undefined)
     return (
       <p role="status" className="container-site flex justify-center gap-2 py-24 text-ink-muted">
+        <Seo title="Resultado do simulado" description="Carregando o resultado." />
         <Loader2 className="size-5 animate-spin" aria-hidden /> Carregando resultado…
       </p>
     )
   if (!t || !t.resultado)
     return (
       <div className="container-site max-w-2xl py-20 text-center">
+        <Seo title="Resultado não encontrado" description="O resultado não foi encontrado neste dispositivo." />
         <AlertTriangle className="mx-auto size-10 text-action" aria-hidden />
         <h1 className="mt-4 text-2xl font-extrabold">{t ? 'Este simulado ainda não foi finalizado.' : 'Resultado não encontrado neste dispositivo.'}</h1>
         <Link to={t ? `/simulados/prova/${t.id}` : '/simulados'} className="btn btn-primary mt-6">

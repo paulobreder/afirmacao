@@ -17,7 +17,7 @@ export default function RedacaoLab() {
   const [eixoLista, setEixoLista] = useState('')
 
   useEffect(() => {
-    redacoes.listar().then(setHistorico, () => {})
+    redacoes.listar().then((rs) => setHistorico(rs.filter((r) => r.texto.trim())), () => {})
   }, [])
 
   async function sortear() {

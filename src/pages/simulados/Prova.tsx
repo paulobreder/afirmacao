@@ -44,6 +44,7 @@ export default function Prova() {
   if (erro)
     return (
       <div className="container-site max-w-2xl py-20 text-center">
+        <Seo title="Simulado não encontrado" description="O simulado não foi encontrado neste dispositivo." />
         <AlertTriangle className="mx-auto size-10 text-action" aria-hidden />
         <h1 className="mt-4 text-2xl font-extrabold">{erro}</h1>
         <p className="mt-2 text-ink-muted">O histórico fica salvo apenas no navegador em que o simulado foi iniciado.</p>
@@ -55,6 +56,7 @@ export default function Prova() {
   if (!t || !porId)
     return (
       <p role="status" className="container-site flex items-center justify-center gap-2 py-24 text-ink-muted">
+        <Seo title="Simulado" description="Abrindo o simulado." />
         <Loader2 className="size-5 animate-spin" aria-hidden /> Abrindo o simulado…
       </p>
     )
@@ -83,19 +85,24 @@ function ProvaAberta({ inicial, porId }: { inicial: Tentativa; porId: Map<string
 
   const ms = useCronometro(inicial.tempoMs, true, (v) => atualizar((x) => ({ ...x, tempoMs: Math.round(v) })))
 
-  // Redação vinculada ao primeiro dia
+  // Redação vinculada ao primeiro dia: carrega a existente; só cria quando o estudante abre a redação
+  // (assim não ficam rascunhos vazios no histórico de quem não chegou a escrever)
   useEffect(() => {
-    if (!temRedacao) return
+    if (!temRedacao || redacao) return
+    let vivo = true
     ;(async () => {
       let r = t.redacaoId ? await redacoes.obter(t.redacaoId) : undefined
-      if (!r) {
+      if (!r && naRedacao) {
         r = await novaRedacao(t.temaRedacao!, t.id)
         atualizar((x) => ({ ...x, redacaoId: r!.id }))
       }
-      setRedacao(r)
+      if (vivo && r) setRedacao(r)
     })()
+    return () => {
+      vivo = false
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [temRedacao])
+  }, [temRedacao, naRedacao])
 
   const irPara = (i: number) => {
     atualizar((x) => ({ ...x, atual: i }))
@@ -278,7 +285,7 @@ function MapaQuestoes({ t, temRedacao, redacaoIniciada, aoIr }: { t: Tentativa; 
                     onClick={() => aoIr(i)}
                     aria-current={atual ? 'step' : undefined}
                     aria-label={`Questão ${i + 1}: ${resp ? `respondida (${resp})` : 'em branco'}${rev ? ', marcada para revisão' : ''}`}
-                    className={`relative flex h-10 w-full items-center justify-center rounded-lg text-sm font-semibold tabular-nums transition-colors ${resp ? 'bg-brand text-white' : 'bg-paper text-ink ring-1 ring-line hover:ring-brand'} ${atual ? 'outline-3 outline-offset-1 outline-ink' : ''}`}
+                    className={`relative flex h-11 w-full items-center justify-center rounded-lg text-sm font-semibold tabular-nums transition-colors ${resp ? 'bg-brand text-white' : 'bg-paper text-ink ring-1 ring-line hover:ring-brand'} ${atual ? 'outline-3 outline-offset-1 outline-ink' : ''}`}
                   >
                     {i + 1}
                     {rev && <span aria-hidden className="absolute -top-1 -right-1 size-3 rounded-full bg-energy ring-2 ring-white" />}

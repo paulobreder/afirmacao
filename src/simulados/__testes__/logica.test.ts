@@ -167,6 +167,7 @@ describe('painel de desempenho', () => {
     expect(p).toMatchObject({ simulados: 2, completos: 1, treinos: 1, questoes: 100, acertos: 1, respondidas: 1, redacoesConcluidas: 1 })
     expect(p.temasPraticados).toEqual(['T001'])
     expect(p.evolucao.map((e) => e.valor)).toEqual([1.1, 0])
-    expect(p.atividades).toHaveLength(5)
+    // 3 simulados + 1 redação; o rascunho vazio (r2) não aparece no histórico
+    expect(p.atividades).toHaveLength(4)
   })
 })

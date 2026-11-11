@@ -1,4 +1,4 @@
-import { copyFileSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs'
+import { copyFileSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -53,9 +53,11 @@ function ajustesPublicacao(): Plugin {
     configResolved: (config) => void (outDir = config.build.outDir),
     closeBundle: () => {
       copyFileSync(resolve(outDir, 'index.html'), resolve(outDir, '404.html'))
+      // As rotas internas não mostram a foto da página inicial: sem pré-carregá-la, economizam dados
+      const html = readFileSync(resolve(outDir, 'index.html'), 'utf8').replace(/\s*<link rel="preload" as="image"[^>]*>/g, '')
       for (const rota of rotasEstaticas) {
         mkdirSync(resolve(outDir, rota), { recursive: true })
-        copyFileSync(resolve(outDir, 'index.html'), resolve(outDir, rota, 'index.html'))
+        writeFileSync(resolve(outDir, rota, 'index.html'), html)
       }
       for (const f of pdfsExcluidos) rmSync(resolve(outDir, 'materiais', f), { force: true })
     },

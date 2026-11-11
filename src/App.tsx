@@ -1,5 +1,5 @@
 import { lazy, Suspense, type ReactNode } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import Home from './pages/Home'
 import Biblioteca from './pages/Biblioteca'
@@ -19,6 +19,12 @@ const RedacaoEditor = lazy(() => import('./pages/simulados/RedacaoEditor'))
 const Desempenho = lazy(() => import('./pages/simulados/Desempenho'))
 
 const sob = (el: ReactNode) => <Suspense fallback={<Carregando />}>{el}</Suspense>
+
+/** Recria a página quando o parâmetro da rota muda (ex.: de um simulado para outro), sem herdar estado. */
+function PorParametro({ children }: { children: ReactNode }) {
+  const params = useParams()
+  return <Suspense key={Object.values(params).join('/')} fallback={<Carregando />}>{children}</Suspense>
+}
 
 function Carregando() {
   return (
@@ -47,10 +53,10 @@ export default function App() {
           <Route path="sobre" element={<Sobre />} />
           <Route path="simulados" element={sob(<SimuladosHub />)} />
           <Route path="simulados/redacao" element={sob(<RedacaoLab />)} />
-          <Route path="simulados/redacao/:id" element={sob(<RedacaoEditor />)} />
+          <Route path="simulados/redacao/:id" element={<PorParametro><RedacaoEditor /></PorParametro>} />
           <Route path="simulados/desempenho" element={sob(<Desempenho />)} />
-          <Route path="simulados/prova/:id" element={sob(<Prova />)} />
-          <Route path="simulados/resultado/:id" element={sob(<Resultado />)} />
+          <Route path="simulados/prova/:id" element={<PorParametro><Prova /></PorParametro>} />
+          <Route path="simulados/resultado/:id" element={<PorParametro><Resultado /></PorParametro>} />
           <Route path="simulados/:dia" element={sob(<IniciarSimulado />)} />
           <Route path="*" element={<NotFound />} />
         </Route>

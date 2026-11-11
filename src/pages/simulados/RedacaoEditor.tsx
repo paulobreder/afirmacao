@@ -20,12 +20,14 @@ export default function RedacaoEditor() {
   if (r === undefined)
     return (
       <p role="status" className="container-site flex justify-center gap-2 py-24 text-ink-muted">
+        <Seo title="Redação" description="Abrindo a redação." />
         <Loader2 className="size-5 animate-spin" aria-hidden /> Abrindo a redação…
       </p>
     )
   if (!r)
     return (
       <div className="container-site max-w-2xl py-20 text-center">
+        <Seo title="Redação não encontrada" description="A redação não foi encontrada neste dispositivo." />
         <AlertTriangle className="mx-auto size-10 text-action" aria-hidden />
         <h1 className="mt-4 text-2xl font-extrabold">Redação não encontrada neste dispositivo.</h1>
         <Link to="/simulados/redacao" className="btn btn-primary mt-6">

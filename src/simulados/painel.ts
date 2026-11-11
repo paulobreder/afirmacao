@@ -44,7 +44,7 @@ export function calcularPainel(ts: Tentativa[], rs: Redacao[]): Painel {
       detalhe: t.resultado ? `${t.resultado.acertos} de ${t.resultado.total} acertos` : 'Em andamento',
       link: t.finalizadaEm ? `/simulados/resultado/${t.id}` : `/simulados/prova/${t.id}`,
     })),
-    ...rs.map((r) => ({
+    ...rs.filter((r) => r.texto.trim() || r.finalizadaEm).map((r) => ({
       id: r.id,
       data: r.finalizadaEm ?? r.atualizadaEm,
       titulo: `Redação: ${temaPorId(r.temaId)?.titulo ?? r.temaId}`,

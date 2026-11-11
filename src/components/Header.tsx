@@ -40,14 +40,14 @@ export function Header() {
         </Link>
 
         <nav aria-label="Principal" className="hidden md:block">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-0.5 lg:gap-1">
             {navItems.map((item) => (
               <li key={item.to}>
                 <NavLink
                   to={item.to}
                   end={item.end}
                   className={({ isActive }) =>
-                    `relative inline-flex min-h-11 items-center rounded-full px-3.5 text-[0.95rem] font-medium transition-colors lg:px-4 ${
+                    `relative inline-flex min-h-11 items-center rounded-full px-2.5 text-[0.95rem] font-medium whitespace-nowrap transition-colors lg:px-3 xl:px-4 ${
                       isActive ? 'text-brand' : 'text-ink-muted hover:text-ink'
                     }`
                   }
@@ -56,7 +56,7 @@ export function Header() {
                     <>
                       {item.label}
                       {isActive && (
-                        <span aria-hidden className="absolute inset-x-3.5 -bottom-[3px] h-[3px] rounded-full bg-energy lg:inset-x-4" />
+                        <span aria-hidden className="absolute inset-x-2.5 -bottom-[3px] h-[3px] rounded-full bg-energy lg:inset-x-3 xl:inset-x-4" />
                       )}
                     </>
                   )}
@@ -67,7 +67,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link to="/materiais?buscar=1" className="btn btn-primary btn-sm hidden lg:inline-flex">
+          <Link to="/materiais?buscar=1" className="btn btn-primary btn-sm hidden xl:inline-flex">
             <Search className="size-4" aria-hidden />
             Buscar materiais
           </Link>
