@@ -3,7 +3,7 @@
 _Última atualização: 9 de novembro de 2026 — primeira versão completa._
 
 ## Publicação
-- No ar em https://paulobreder.github.io/afirmacao/ (GitHub Pages), publicado automaticamente a cada envio para `main` (`.github/workflows/deploy.yml`).
+- No ar em **https://afirmacao-two.vercel.app/** (Vercel, plano gratuito, desde 11/11/2026) e em https://paulobreder.github.io/afirmacao/ (GitHub Pages); os dois são publicados automaticamente a cada envio para `main` (`.github/workflows/deploy.yml`).
 - A ficha de resumo não está na versão publicada (arquivo fora do repositório) e aparece como indisponível.
 
 ## Entregue

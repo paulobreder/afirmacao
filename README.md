@@ -50,7 +50,9 @@ Os PDFs originais ficam em `.enem-cache/` (fora do git).
 
 ## Publicação
 
-O site é publicado no GitHub Pages automaticamente a cada envio para a branch `main` (`.github/workflows/deploy.yml`),
+Endereço principal (Vercel, plano Hobby gratuito): **https://afirmacao-two.vercel.app/** — a Vercel está ligada ao repositório e publica sozinha a cada envio para `main` (configuração em `vercel.json`).
+
+O site também é publicado no GitHub Pages (https://paulobreder.github.io/afirmacao/) automaticamente a cada envio para a branch `main` (`.github/workflows/deploy.yml`),
 inclusive alterações feitas direto no GitHub ou pelo github.dev. Leva cerca de 1 a 2 minutos; o andamento aparece na aba **Actions** do repositório.
 O build usa `BASE_PATH=/afirmacao/` porque o site fica nesse subendereço.
 
